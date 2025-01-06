@@ -1,0 +1,153 @@
+# Project information
+site_name: Stochastic Modelling and Processes
+site_url: https://rbrooksdk.github.io/SMP1_25
+site_author: Richard Brooks
+site_description: Course page for Stochastic Modelling and Processes at VIA University College
+docs_dir: .
+site_dir: ../site
+# Repository information
+repo_name: Github
+repo_url: https://github.com/RBrooksDK/SMP1_25
+
+# Copyright
+copyright: Copyright &copy; 2025 Richard Brooks
+
+# Configurations
+theme:
+  name: material
+  language: en
+  # custom_dir: overrides
+  favicon: figures/fav.png
+  logo: figures/gaussian.png
+  icon:
+    repo: fontawesome/brands/github
+    annotation: material/chevron-right-circle
+  font:
+    text: Roboto
+    code: Red Hat Mono
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    # - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: orange
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
+
+plugins:
+  - same-dir
+  - blog
+  - search
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: material/email
+      link: mailto:rib@via.dk
+    - icon: fontawesome/brands/github
+      link: https://github.com/RBrooksDK/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/rbrooks-dk/
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Richard Brooks: https://rbrooksdk.github.io
+  - Home: README.md
+  - Sessions:
+    - Sessions/README.md
+    - 00 Prerequisties: 00_Important_Recap/README.md
+    - 01 Introduction to Probability and Random Variables: 01_Introduction_+_Recap_Probability_+_Stochastic_Variables/README.md
+    - 02 Discrete Random Variables: 02_Discrete_Random_Variables/README.md
+    - 03 Continuous Random Variables: 03_Continuous_Random_Variables/README.md
+    - 04 Multivariate Random Variables: 04_Multivariate_Random_Variables/README.md
+    - 05 Point Estimation and Sampling: 05_Point_Estimation_and_sampling/README.md
+    - 06 Statistical Intervals: 06_Statistical_Intervals/README.md
+    - 07 Hypothesis Testing: 07_Hypothesis_Testing/README.md
+    - 08 Regression: 08_Regression/README.md
+    - 09 Introduction to Stochastic Processes: 09_Introduction_to_Stochastic_Processes/README.md
+    - 10 Markov Chains: 10_Markov_Chains/README.md
+    - 11 Recap and Exercises: 11_Recap_and_Exercises_Markov_Chains/README.md
+  - Exam: pages/exam.md
+  - FAQ: pages/faq.md
