@@ -1,0 +1,90 @@
+/* Dark mode as default */
+[data-md-color-scheme="slate"] {
+  --md-slate-bg-color: #121212; /* Main background */
+  --md-slate-fg-color: #378856; /* Secondary text */
+  
+  /* Primary and accent colours */
+  --md-primary-fg-color: #31473A; /* Primary colour */
+
+  /* Custom link colour */
+  --md-link-fg-color: #91c776;
+
+
+  /* Apply custom link colour to linkable elements */
+  a {
+      color: var(--md-link-fg-color); /* Use the custom link colour */
+    }
+  a:hover {
+    text-decoration: underline; /* Optional: Remove underline on hover */
+  }
+
+  /* Code styling */
+  --md-code-bg-color: #1E1E1E; /* Code block background */
+  --md-code-fg-color: #A8D5BA; /* Code text colour */
+  --md-code-hl-color: #FFC107; /* Highlighted code colour */
+
+  /* Admonition (alerts, notes) */
+  --md-admonition-fg-color: #FFFFFF;
+  --md-admonition-bg-color: #31473A;
+  
+  /* Footer styling */
+  --md-footer-bg-color: #121212; /* Footer background */
+  --md-footer-fg-color: #A8D5BA; /* Footer text */
+}
+
+/* light mode as */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #dcddd3 ; /* Main background */
+
+  /* Primary and accent colours */
+  --md-primary-fg-color: #31473A; /* Primary colour */
+
+  /* Custom link colour */
+
+  a:hover {
+    text-decoration: underline; /* Optional: Remove underline on hover */
+  }
+
+  /* Code styling */
+  --md-code-bg-color: #1E1E1E; /* Code block background */
+  --md-code-fg-color: #A8D5BA; /* Code text colour */
+  --md-code-hl-color: #FFC107; /* Highlighted code colour */
+
+  /* Admonition (alerts, notes) */
+  --md-admonition-fg-color: #FFFFFF;
+  --md-admonition-bg-color: #31473A;
+  
+  /* Footer styling */
+  --md-footer-bg-color: #121212; /* Footer background */
+  --md-footer-fg-color: #A8D5BA; /* Footer text */
+}
+
+ul ::marker {
+  color: #91c776; /* Replace with your desired color */
+}
+
+ol ::marker {
+  color: #91c776; /* Replace with your desired color */
+}
+
+.fa-circle-info {
+  color: #91c776;
+}
+.fa-vector-square {
+  color: #91c776;
+}
+
+.fa-book-open {
+  color: #91c776;
+}
+
+.fa-wave-square   {
+  color: #91c776;
+}
+
+.center-table {
+  text-align: center;
+}
+.md-typeset .center-table :is(td,th):not([align]) {
+  text-align: initial; /* Reset alignment for table cells */
+}
