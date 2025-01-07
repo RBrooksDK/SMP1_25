@@ -21,7 +21,7 @@ Session from 20/21:
 
 ---
 
-### Topic Description
+### Session Description
 In this session, we will look at the foundational principles of statistics and probability theory, starting with an understanding of why these fields are essential for analysing data and making predictions. We will discuss the distinction between samples and populations, along with key measures and scales of measurement. The session will introduce random experiments and the foundational concepts of probabilities.
 
 Building on this, we will review key concepts in probability, including types of probability, conditional probability, and conditional independence. Finally, we introduce the concept of a random variable.
@@ -42,6 +42,7 @@ Building on this, we will review key concepts in probability, including types of
 ---
 
 ### Exercises
+Full answers to the Exam case exercises (8-10) can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
@@ -287,7 +288,7 @@ has real solutions?
     Also, see more elaborate solution [here](src/Solution7.pdf)
 
 
-#### Exercise 8
+#### Exercise 8 (Exam 2014.2 (a+b))
 An IT company receives its printed circuit boards from two different suppliers, 1 and 2. Records show that 5% of the circuit boards from supplier 1 and 3% of the circuit boards from supplier 2 are defective. 60% of the company’s current circuit boards come from supplier 2, and the remaining from supplier 1. The company usually keeps a stock of 2000 circuit boards. 
 
 1. Based on this information, construct a contingency table of the company’s circuit board stock. Place supplier in the columns and defective/non-defective in the rows.
@@ -308,7 +309,7 @@ An IT company receives its printed circuit boards from two different suppliers, 
         P(\text{Supplier 1} | \text{Defective}) = \frac{P(\text{Supplier 1} \cap \text{Defective})}{P(\text{Defective})} = \frac{40/2000}{76/2000} = \frac{40}{76} \approx 0.5263.
         \]
 
-#### Exercise 9
+#### Exercise 9 (Exam 2015.2)
 A batch of 1000 hard drives from three suppliers were tested. 2% of the hard drives from Toshiba and 2% of the hard drives from Seagate were defective, and in the entire batch there were 3% defectives in total. In the batch, 50% were Western Digital hard drives and 30% were Toshibas.
 
 1. Based on this information, create a 3 x 2 contingency table of the hard drives.
@@ -337,7 +338,7 @@ A batch of 1000 hard drives from three suppliers were tested. 2% of the hard dri
         P(\text{Western Digital}) = \frac{500}{1000} = 0.5.
         \]
 
-#### Exercise 10
+#### Exercise 10 (Exam 2016 New Test.3)
 The probability that a regularly scheduled flight departs on time is 0.83; the probability that it arrives on time is 0.82; and the probability that it departs and arrives on time is 0.78. Find the probability that a plane
 
 1. Arrives on time, given that it departed on time
