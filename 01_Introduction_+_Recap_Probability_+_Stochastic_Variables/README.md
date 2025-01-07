@@ -42,7 +42,7 @@ Building on this, we will review key concepts in probability, including types of
 ---
 
 ### Exercises
-Full answers to the Exam case exercises (8-10) can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
+Full solutions to the Exam case exercises (8-10) can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }

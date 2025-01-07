@@ -46,7 +46,7 @@ It is also important that you think about the relationship between the discrete 
 ---
 
 ### Exercises
-Full answers to the exercises can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
+Full solutions to the exercises can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }

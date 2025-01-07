@@ -39,7 +39,7 @@ The Poisson distribution, a model for counting events over time or space, is int
 ---
 
 ### Exercises
-Full answers to the exercises can be found in [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo).
+Full solutions to the exercises can be found in [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo).
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
