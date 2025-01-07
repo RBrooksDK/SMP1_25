@@ -1,6 +1,6 @@
 # Sessions
 
-Click on a session to the left to access a plan of a specific session and additional resources for that session. The plan includes material for both the lectures and recitations.
+Click on a session to the left to access a plan of a specific session and additional resources for that session.
 
 <div class="center-table" markdown>
 

@@ -13,15 +13,15 @@
 
 * Course responsible: Associate Professor [Richard Brooks](https://rbrooksdk.github.io), <rib@via.dk>
 * 5 ECTS (European Credit Transfer System), corresponding to 130 hours of work
-* 10 sessions, each with a duration of 4 lessons, starting in week 6
+* 11 sessions, each with a duration of 4 lessons, starting in week 6
 * Bachelor level course - the course is academically challenging working on problems independently.
 * Grade: 7-step scale
-* Type of assessment: 4 hours written exam (see exam description in the menu to the left)
-* Recommended prerequisites: In the session plan below, a dedicated entry is made for prerequisites.
+* Type of assessment: 4-hour written exam (see exam description in the menu to the left)
+* Recommended prerequisites: In "Sessions" in the left menu, a dedicated entry is made for prerequisites.
 
 ## :fontawesome-solid-vector-square:{ .fa-vector-square} Lectures and course organization
 
-The course is scheduled to start in week 6 and will be held on Tuesdays from 12:45 to 16:05. In general, each session is made up of four activities:
+The course is scheduled to start in week 6 and will be held on **Tuesdays** from **12:45 to 16:05** in room **C04.16**. In general, each session is made up of four activities:
 
 1. At the beginning of each session, there will be a short recap of the previous session.
 2. We then go through the exercises from the previous session.
@@ -61,7 +61,7 @@ Non-session specific resources such as the exercises from the book, solutions, o
 
 [General Resources SMP](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
 
-Wiseflow code for all flows that are used during the course is always 0000. This is not the code for the actual exam in June, though.
+The Wiseflow code for all flows that are used during the course is always 0000. This is not the code for the actual exam in June, though.
 
 ---
 
