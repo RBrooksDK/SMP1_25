@@ -30,6 +30,14 @@
   /* Footer styling */
   --md-footer-bg-color: #121212; /* Footer background */
   --md-footer-fg-color: #A8D5BA; /* Footer text */
+
+  ul ::marker {
+    color: #91c776; /* Replace with your desired color */
+  }
+  
+  ol ::marker {
+    color: #91c776; /* Replace with your desired color */
+  }
 }
 
 /* light mode as */
@@ -41,14 +49,10 @@
 
   /* Custom link colour */
 
+
   a:hover {
     text-decoration: underline; /* Optional: Remove underline on hover */
   }
-
-  /* Code styling */
-  --md-code-bg-color: #1E1E1E; /* Code block background */
-  --md-code-fg-color: #A8D5BA; /* Code text colour */
-  --md-code-hl-color: #FFC107; /* Highlighted code colour */
 
   /* Admonition (alerts, notes) */
   --md-admonition-fg-color: #FFFFFF;
@@ -57,17 +61,15 @@
   /* Footer styling */
   --md-footer-bg-color: #121212; /* Footer background */
   --md-footer-fg-color: #A8D5BA; /* Footer text */
+
+  ul ::marker {
+    color: #31473A; /* Replace with your desired color */
+  }
+  
+  ol ::marker {
+    color: #31473A; /* Replace with your desired color */
+  }
 }
-
-ul ::marker {
-  color: #91c776; /* Replace with your desired color */
-}
-
-ol ::marker {
-  color: #91c776; /* Replace with your desired color */
-}
-
-
 .fa-circle-info {
   color: #91c776;
 }
