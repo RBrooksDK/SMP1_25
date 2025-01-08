@@ -69,7 +69,7 @@ The course is loosely built up around [H. Pishro-Nik's](http://www.ecs.umass.edu
 
 ---
 
-I have compiled and uploaded all session from January 2021 to youtube. The link below will take you to a playlist containing all 10 sessions (theory only)
+I have compiled and uploaded all session from January 2021 to YouTube. The link below will take you to a playlist containing all 10 sessions (theory only)
 
 [Stochastic Modelling 2021 – All sessions](https://youtube.com/playlist?list=PL0bHDtI1FqFxv1ZxzsMn1sfYSxVSBbc05)
 
@@ -79,7 +79,7 @@ Make sure you install a working version of Jupyter Notebook and Python version 3
 
 ## Historical Notes
 
-Stichastic Modelling and Processing was first offered in 2014 and has been scheduled 1-2 times per year since then. The course responsible is Richard Brooks (RIB) and has been the only lecturer teaching the course.
+Stochastic Modelling and Processes was first offered in 2014 and has been scheduled 1–2 times per year since. The course responsible is [Richard Brooks (RIB)](https://rbrooksdk.github.io) and has been the only lecturer teaching the course.
 
 <div class="center-table" markdown>
 
@@ -87,12 +87,12 @@ Stichastic Modelling and Processing was first offered in 2014 and has been sched
 
 | Grade | Count |
 |:-----:|:-----:|
-| 12    | 1     |
+| 12    | 3     |
 | 10    | 8     |
-| 7     | 12    |
+| 7     | 7    |
 | 4     | 5     |
-| 02    | 3     |
-| 00    | 2     |
-| -3    | 3     |
+| 02    | 4     |
+| 00    | 6     |
+| -3    | 1     |
 
 </div>
