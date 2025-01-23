@@ -1,4 +1,4 @@
-<h1 align="center">Prerequisites/h1>
+<h1 align="center">Prerequisites</h1>
 
 Students taking the course are expected to have basic mathematical skills (e.g. from IT-DMA1 or IT-MSE1). The course is designed to be self-contained, but it is recommended that students have a basic understanding of the following topics:
 
