@@ -1,6 +1,6 @@
 <p align="center">
     <h1 align="center">Stochastic Modelling and Processes - Spring 2025</h1>
-    <p align="center">Repository for <a href="https://www.via.dk/TMH/Courses/stochastic-modelling-and-processes?education=sw">SMP1-S25</a> at VIA.</p>
+    <p align="center">Repository for <a href="https://www.via.dk/TMH/Courses/stochastic-modelling-and-processes?education=sw">SMP1-S25</a> at VIA</p>
     <p align="center"><strong><a href="https://rbrooksdk.github.io/SMP1_25">Checkout the homepage!</a></strong></p>
 </p>
 
@@ -60,6 +60,10 @@ ASPE: Montgomery, D.C. & Runger, G.C.. Applied Statistics and Probability for En
 Non-session specific resources such as the exercises from the book, solutions, old exam cases, etc. can be found her:
 
 [General Resources SMP](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
+
+This folder is always accessible in the menu to the left.
+
+---
 
 The Wiseflow code for all flows that are used during the course is always 0000. This is not the code for the actual exam in June, though.
 

@@ -1,14 +1,16 @@
-<h1 align="center">Important Math Recap</h1>
+<h1 align="center">Prerequisites/h1>
 
-### Material for recap
+Students taking the course are expected to have basic mathematical skills (e.g. from IT-DMA1 or IT-MSE1). The course is designed to be self-contained, but it is recommended that students have a basic understanding of the following topics:
+
+### Material
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/En0s5AGeHABFl6Vb0SaGndwBNjmoxJ3-CbjwXURoX7xScQ?e=fiKF5a)
 
-### Topics to recap
+### Topics
 
-Most of the topics can be found in our course [Mathematics for Software Engineers (MSE)](https://rbrooksdk.github.io/MSE1/). I have written a [book](https://drive.google.com/file/d/1P9eidJb5qtlZgvHCtqu4uuPa5FFU0Zpn/view?usp=sharing) for that course and it covers the topics quite well. The reference below are to the slides found in the material above as well as the book chapters that also correspond to the MSE course sessions.
+Most of the topics can be found in our course [Mathematics for Software Engineers (MSE)](https://rbrooksdk.github.io/MSE1/). I have written a [book](https://drive.google.com/file/d/1P9eidJb5qtlZgvHCtqu4uuPa5FFU0Zpn/view?usp=sharing) for that course, and it covers the topics quite well. The references below are to the slides found in the material above as well as the book chapters that also correspond to the MSE course sessions.
 
-#### Boolean Algebra:
+#### Boolean Algebra
 - Ch. 4
 - Similar to sets, so all rules also apply for sets
 - Addition is same as union, multiplication the same as intersection and negation same as complement
@@ -18,6 +20,7 @@ Most of the topics can be found in our course [Mathematics for Software Engineer
 - Ch. 5
 - Basic understanding of sets
 - Important: Equivalence slide 29
+- You should have also gone through this in DBS1
 
 #### Combinatorics
 - Ch. 5
