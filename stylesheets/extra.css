@@ -121,3 +121,31 @@
 .md-typeset details.answer summary::after {
   color: #91c776; /* Green for collapsible indicator */
 }
+
+/* Change the border color for the "question" admonition */
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  border-color: #91c776; /* Green border for "question" */
+  outline: none; /* Remove any focus outline */
+  box-shadow: none; /* Remove any default box shadow */
+}
+
+/* Change the background color of the title for "question" admonitions */
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
+  background-color: rgba(43, 155, 70, 0.1); /* Light green background for title */
+  outline: none; /* Remove any focus outline */
+  box-shadow: none; /* Remove any default box shadow */
+}
+
+/* Change the icon color for "question" admonitions */
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before {
+  background-color: #91c776; /* Green icon color */
+}
+
+/* Change color for collapsible indicator in "question" */
+.md-typeset details[open].question summary::after,
+.md-typeset details.question summary::after {
+  color: #91c776; /* Green for collapsible indicator */
+}
