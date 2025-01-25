@@ -1,4 +1,4 @@
-<h2 align="center">10 Markov Chains</h2>
+<h1 align="center">10 Markov Chains</h1>
 
 **Material:**
 

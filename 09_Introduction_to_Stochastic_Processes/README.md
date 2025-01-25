@@ -1,4 +1,4 @@
-<h2 align="center">09 Introduction to Stochastic Processes</h2>
+<h1 align="center">09 Introduction to Stochastic Processes</h1>
 
 
 ## Material:

@@ -1,4 +1,4 @@
-<h2 align="center">11 Recap and Exercises Markov Chains</h2>
+<h1 align="center">11 Recap and Exercises Markov Chains</h1>
 
 **Material:**
 

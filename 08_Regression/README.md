@@ -1,4 +1,4 @@
-<h2 align="center">08 Regression</h2>
+<h1 align="center">08 Regression</h1>
 
 
 ## Material:

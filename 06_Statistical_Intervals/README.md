@@ -1,4 +1,4 @@
-<h2 align="center">06 Statistical Intervals</h2>
+<h1 align="center">06 Statistical Intervals</h1>
 
 ## Material:
 

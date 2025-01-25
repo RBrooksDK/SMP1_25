@@ -1,4 +1,4 @@
-<h2 align="center">07 Hypothesis Testing</h2>
+<h1 align="center">07 Hypothesis Testing</h1>
 
 ## Material:
 ASPE: 9.1-9.3 + 9.5 + 9.8 + 10.1-10.4 + 10.6
