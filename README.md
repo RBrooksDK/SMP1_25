@@ -30,7 +30,7 @@ The course is scheduled to start in week 6 and will be held on **Tuesdays** from
 
 This then loops back to (1) at the beginning of the next session.
 
-There are no mandatory assignments, but it is highly recommended work on the exercises for each session. No instruction is provided for the exercises so you will have to work on them on your own or form study groups.
+There are no mandatory assignments, but it is highly recommended to work on the exercises for each session. No instruction is provided for the exercises so you will have to work on them on your own or form study groups.
 
 ## :fontawesome-solid-wave-square:{ .fa-wave-square} Course content and learning objectives
 
