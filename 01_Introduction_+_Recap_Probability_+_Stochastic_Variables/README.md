@@ -9,7 +9,7 @@ Also, check out the [prerequisites](https://rbrooksdk.github.io/SMP1_25/00_Impor
 
 ### Session Material
 
-[Session Notes]()
+[Session Notes](https://drive.google.com/file/d/1oqEy7sINksGCfdytv_O8qIZ0FoVEyWjz/view?usp=drive_link)
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuOeq6E9sg9Jjf5n_qCeM80B4uonPufDX4RnR0nFz3EdMg?e=dRNi7T)
 
