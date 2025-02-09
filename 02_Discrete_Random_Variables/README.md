@@ -7,9 +7,9 @@ Solve the [exercises from session 1](https://rbrooksdk.github.io/SMP1_25/01_Intr
 
 ### Session Material
 
-[Recap and Exercises - notes]()
+[Recap and Exercises - notes](https://drive.google.com/file/d/1xX9-A1fTUsaXV-mFlmRYR4fRoQcoszrX/view?usp=sharing)
 
-[Session notes]()
+[Session notes](https://drive.google.com/file/d/1LJ8Nu0D1PLLB1FF1jTsLK50HGLhl1EtG/view?usp=sharing)
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo)
 
