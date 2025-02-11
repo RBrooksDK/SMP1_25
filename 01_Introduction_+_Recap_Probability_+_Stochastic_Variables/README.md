@@ -253,18 +253,6 @@ P(T \leq t) =
         P(T \leq 3) = \frac{1}{16}(3)^2 = \frac{9}{16}.
         \]
 
-        Compute \(P(T \leq 1)\) (already found in part (a)):
-
-        \[
-        P(T \leq 1) = \frac{1}{16}.
-        \]
-
-        Therefore:
-
-        \[
-        P(1 \leq T \leq 3) = \frac{9}{16} - \frac{1}{16} = \frac{8}{16} = \frac{1}{2}.
-        \]
-
 #### Exercise 7
 You choose a point $(A,B)$ uniformly at random in the unit square $\{(x,y):0 \leq x,y \leq 1\}$.
 
