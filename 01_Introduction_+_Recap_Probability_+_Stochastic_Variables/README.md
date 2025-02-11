@@ -244,7 +244,7 @@ P(T \leq t) =
     3. Using the subtraction rule:
 
         \[
-        P(1 \leq T \leq 3) = P(T \leq 3) - P(T \leq 1).
+        P(1 \leq T \leq 3) = P(T \leq 3) - P(T < 1).
         \]
 
         Compute \(P(T \leq 3)\):
