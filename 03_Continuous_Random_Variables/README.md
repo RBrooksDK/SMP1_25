@@ -88,10 +88,7 @@ where \(c\) is a constant.
     3. \(P\left(-\frac{1}{2} < X < \frac{1}{2}\right) = \frac{1}{32} = 0.0315\) and \(P(X > 0) = \frac{1}{2} = 0.5\)
     4. \(E[X] = 0\) and \(VAR(X) = \frac{5}{7}\)
 
-
-
-
-#### Exercise 2 (Exam 2014.3 (d+e))
+#### Exercise 2 (Exam 2014.3 (not d+e))
 A central database server receives, on the average, 25 requests per second from its clients. Assuming that requests received by a database follow a Poisson distribution
 
 <ol start="1">
