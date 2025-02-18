@@ -56,12 +56,13 @@ Full solutions to the exercises can be found in the [general resource folder](ht
 Let \(X\) denote a continuous stochastic variable with the following probability density function:
 
 \[
-f(x) =
-\begin{cases}
-c x^4 & \text{for } -1 \leq x \leq 1, \\
-0 & \text{otherwise,}
-\end{cases}
+    f(x) =
+    \begin{cases}
+    c x^4 & \text{for } -1 \leq x \leq 1, \\
+    0 & \text{otherwise,}
+    \end{cases}
 \]
+
 where \(c\) is a constant.
 
 1. Show that the cumulative probability function of \(X\) is:
