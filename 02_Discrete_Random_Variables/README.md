@@ -20,7 +20,7 @@ Session from 20/21:
 ---
 
 ### Session Description
-In this session, we look at a variety of discrete probability distributions, laying the foundation for analysing and modelling random processes. We begin with the Bernoulli distribution, which describes experiments with two possible outcomes, and extend this to the Binomial and Geometric distributions. Building on these, we we move on to the Negative Binomial (Pascal) distribution and the Hypergeometric distribution, highlighting their applications in scenarios where sampling without replacement plays a role. 
+In this session, we look at a variety of discrete probability distributions, laying the foundation for analysing and modelling random processes. We begin with the Bernoulli distribution, which describes experiments with two possible outcomes, and extend this to the Binomial and Geometric distributions. Building on these, we move on to the Negative Binomial (Pascal) distribution and the Hypergeometric distribution, highlighting their applications in scenarios where sampling without replacement plays a role. 
 
 The Poisson distribution, a model for counting events over time or space, is introduced, along with its use as an approximation for the Binomial distribution under specific conditions. Finally, we discuss key properties of these distributions, including their probability mass function (PMF) and cumulative distribution functions (CDFs), expectations, and variances.
 
@@ -49,8 +49,8 @@ Note, sometimes we use '$=$' instead of '$\approx$' when we state probabilities 
 
 #### Exercise 1
 A computer system uses passwords that are exactly six
-characters and each character is one of the 26 letters (a-–z) or
-10 integers (0-–9). Suppose that 10,000 users of the system have
+characters and each character is one of the 26 letters (a–z) or
+10 integers (0–9). Suppose that 10,000 users of the system have
 unique passwords. A hacker randomly selects (with replacement)
 100,000 passwords from the potential set, and a match to a user’s
 password is called a hit.
@@ -79,7 +79,7 @@ show up is 0.10, and the passengers behave independently.
 
 #### Exercise 3
 A player of a video game is confronted with a series
-of opponents and has an 80\% probability of defeating each one.
+of opponents and has an 80% probability of defeating each one.
 Success with any opponent is independent of previous encounters.
 Until defeated, the player continues to contest opponents.
 

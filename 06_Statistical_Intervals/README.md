@@ -22,9 +22,17 @@ Statistical intervals are a way of expressing the uncertainty associated with a 
 - Tolerance and prediction interval
 
 
-## Problems to be worked on in/after class:
 
-Do Problems 6.
+---
 
+### Exercises
+Full solutions to the exercises can be found in [Session material]().
 
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
 
+Note, sometimes we use '$=$' instead of '$\approx$' when we state probabilities with a given decimal precision.
+
+#### Exercise 1
+The yield of a chemical process is being studied. From previous experience, yield is known to be normally distributed and $\sigma=3$. The past 5 days of plant operation have resulted in the following percent yields: $91.6,88.75,90.8,89.95$, and 91.3 . Find a $95 \%$ two-sided confidence interval on the true mean yield.

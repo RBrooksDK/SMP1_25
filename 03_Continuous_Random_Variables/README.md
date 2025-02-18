@@ -14,9 +14,9 @@ Today you will need to brush up on your basic calculus skills as this will not b
 
 ### Session Material
 
-[Recap notes]()
+[Recap notes](https://drive.google.com/file/d/1bfSGEXCjWAhseYAkICVakgEmtgMJUtBy/view?usp=sharing)
 
-[Session notes Part 1]()
+[Session notes Part 1](https://drive.google.com/file/d/1-MKzwovM7uHrSUQ_XBe1NczVT2ssdbKd/view?usp=sharing)
 
 [Session notes Part 2]()
 
