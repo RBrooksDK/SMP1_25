@@ -84,7 +84,7 @@ where \(c\) is a constant.
 
 ??? answer
     1. Can be shown either by integrating the probability density function or by differentiating the cumulative probability function.
-    2. \(c = \frac{5}{3}\)
+    2. \(c = \frac{5}{2}\)
     3. \(P\left(-\frac{1}{2} < X < \frac{1}{2}\right) = \frac{1}{32} = 0.0315\) and \(P(X > 0) = \frac{1}{2} = 0.5\)
     4. \(E[X] = 0\) and \(VAR(X) = \frac{5}{7}\)
 
