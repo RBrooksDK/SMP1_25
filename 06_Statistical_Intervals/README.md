@@ -1,26 +1,36 @@
-<h1 align="center">06 Statistical Intervals</h1>
+<h1 align="center">06 Point Estimation, Sampling and Statistical Intervals</h1>
 
 ### Session Preparation:
-ASPE: 8 (not 8.6)
+ASPE: 7 (not 7.3.4 and 7.4.3) + 8 (not 8.6)
 
 Solve the [exercises from session 5](https://rbrooksdk.github.io/SMP1_25/05_Point_Estimation_and_sampling/#exercises) before class.
 
 ### Session Material
 
-[Recap notes](https://drive.google.com/file/d/10xgGtMHdRsu2p9ISkxM1I0RY6_Dah-fx/view?usp=sharing)
+[Recap notes]()
 
-[Session Notes](https://drive.google.com/file/d/1TsK3ewuI5jNF6JuT4Yg1Y3JP85F5OZAI/view?usp=sharing)
+[Session Notes]()
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EoY5rMCapgZLjtOdxkhvvVoBh_QnTKnGGcTPPM5vjoHd4w?e=Itlujg)
 
-Session from 20/21: 
+Sessions from 20/21:
+
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lY7hLitDi-U?si=yLkFWoPkzkZFuSk2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZBIyMSuUz_Y?si=KxoNdKCAgff7l9ti" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Session Description
+You will most likely experience that the next 2–3 topics are a bit less complex than the previous three topics.
+
+Point estimation and sampling are important concepts in statistics. Point estimation involves using a statistic, such as the sample mean or proportion, to estimate an unknown population parameter. The goal is to find the value of the statistic that is most likely to be the true value of the parameter. Sampling, on the other hand, involves selecting a subset of individuals from a larger population and using their data to make inferences about the entire population. The key to effective sampling is ensuring that the sample is representative of the population and that the sample size is large enough to accurately estimate the population parameter of interest. Together, point estimation and sampling provide a framework for making accurate and reliable statistical inferences.
 
 Statistical intervals are a way of expressing the uncertainty associated with a statistical estimate. They provide a range of values within which the true value of a population parameter or a future observation is likely to fall, based on a sample of data. Confidence intervals estimate the value of a population parameter with a measure of uncertainty, while prediction intervals provide a range of values for a future observation, taking into account both the uncertainty associated with estimating the population parameter and the variability associated with predicting individual observations. Statistical intervals are commonly used in various fields to estimate population parameters or future outcomes with a measure of precision and reliability.
 
 #### Key Concepts
+- Sampling Distribution
+- Central Limit Theorem
+- Standard Error
 - CI for mean
 - CI for proportion
 - CI for variance
@@ -29,10 +39,8 @@ Statistical intervals are a way of expressing the uncertainty associated with a 
 ---
 
 ### Exercises
-The first five exercises are from today’s topics. Do these first. The rest is a bit of everything, including
-covariance and correlation which we did not do exercises in yet.
 
-Full solutions to the book exercises (1-5) can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
+Full solutions to the book exercises can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
@@ -192,93 +200,35 @@ The 2004 presidential election exit polls from the critical state of Ohio provid
         $$
 
 
-#### Exercise 6
-Let $X$ be a continuous random variable with PDF
+#### Exercise 6 (Book 7.2.8)
+Scientists at the Hopkins Memorial Forest in western Massachusetts have been collecting meteorological and environmental data in the forest data for more than 100 years. In the past few years, sulfate content in water samples from Birch Brook has averaged \(7.48 \mathrm{mg} / \mathrm{L}\) with a standard deviation of \(1.60 \mathrm{mg} / \mathrm{L}\).
 
-$$
-f_X(x)= \begin{cases}\frac{5}{32} x^4 & 0 \leq x \leq 2 \\ 0 & \text { otherwise }\end{cases}
-$$
+1. What is the standard error of the sulfate in a collection of 10 water samples?
+2. If 10 students measure the sulfate in their samples, what is the probability that their average sulfate will be between 6.49 and \(8.47 \mathrm{mg} / \mathrm{L}\) ?
+3. What do you need to assume for the probability calculated in (b) to be accurate?
 
-and let $Y=X^2$.
-
-1. Find CDF of $Y$.
-2. Find PDF of $Y$.
-3. Find $E Y$.
 ??? answer
-    1. $$F_Y(y)=\left\{\begin{array}{lc}
-    0 & \text { for } y<0 \\
-    \frac{1}{32} y^2 \sqrt{y} & \text { for } 0 \leq y \leq 4 \\
-    1 & \text { for } y>4
-    \end{array}\right.$$
-    2. $$ f_Y(y)=F_Y^{\prime}(y)= \begin{cases}\frac{5}{64} y \sqrt{y} & \text { for } 0 \leq y \leq 4 \\ 0 & \text { otherwise }\end{cases}$$
-    3. $$ E Y=\frac{20}{7} $$
+    1. \(SE = 0.51\)
+    2. \(P(6.49 < \bar{X} < 8.47) = 0.95\)
+    3. The samples are independent. And that the population is normally distributed, or the sample size is large.
 
-#### Exercise 7
-Consider two random variables $X$ and $Y$ with joint PMF given in the Table
-<div class="center-table" markdown>
+#### Exercise 7 (Book 7.2.10)
+Researchers in the Hopkins Forest (see Exercise 7.2.8) also count the number of maple trees (genus acer) in plots throughout the forest. The following is a histogram of the number of live maples in 1002 plots sampled over the past 20 years. The average number of maples per plot was 19.86 trees with a standard deviation of 23.65 trees.
 
-|  | $Y=0$ | $Y=1$ | $Y=2$ |
-| :---: | :---: | :---: | :---: |
-| $X=0$ | $\frac{1}{6}$ | $\frac{1}{4}$ | $\frac{1}{8}$ |
-| $X=1$ | $\frac{1}{8}$ | $\frac{1}{6}$ | $\frac{1}{6}$ |
+1. If we took the mean of a sample of eight plots, what would be the standard error of the mean?
+2. Using the central limit theorem, what is the probability that the mean of the eight would be within 1 standard error of the mean?
+3. Why might you think that the probability that you calculated in (b) might not be very accurate?
 
-</div>
-
-1. Find $\operatorname{Cov}(X, Y)$
-2. Find $\rho(X, Y)$
 ??? answer
-    1. \(\operatorname{Cov}(X, Y)=\frac{1}{24}\)
-    2. \(\rho(X, Y)\approx 0.11\)
+    1. \(SE = 8.36\)
+    2. \(0.68\)
+    3. The central limit theorem applies when the sample size $n$ is large. Here $n = 8$ may be too small because the distribution of the counts of maple trees is quite skewed (which you can see in the histogram in the solutions from the book).
+
 
 #### Exercise 8
-Let $X$ and $Y$ be two independent $N(0,1)$ random variables and
-
-$$
-\begin{aligned}
-& Z=11-X+X^2 Y \\
-& W=3-Y
-\end{aligned}
-$$
-
-
-Find $\operatorname{Cov}(Z, W)$.
+The number of accidents in a certain city is modeled by a Poisson random variable with average rate of 10 accidents per day. Suppose that the number of accidents in different days are independent. Use the central limit theorem to find the probability that there will be more than 3800 accidents in a certain year. Assume that there are 365 days in a year.
 
 ??? answer
-    $$\operatorname{Cov}(Z, W)=-1$$
+    \(P(Y \geq 3800) \approx 0.0065\)
 
-#### Exercise 9
-Let $X$ be a continuous random variable with PDF
-
-$$
-f_X(x)= \begin{cases}x^2+\frac{2}{3} & 0 \leq x \leq 1 \\ 0 & \text { otherwise }\end{cases}
-$$
-
-1. Find $E\left(X^n\right)$, for $n=1,2,3, \cdots$. Note, you must find an expression involving $n$.
-2. Find variance of $X$.
-
-??? answer
-    1. $$E\left[X^n\right]=\frac{5 n+9}{3(n+1)(n+3)} . \quad \text { where } n=1,2,3, \cdots $$
-    2. $$\operatorname{Var}(X)=0.0819$$
-
-#### Exercise 10
-Challenge Exercise. I have solutions, but did anyone solve it?
-The following exercise comes from the 2020 exam in the 10 ECTS course in Probability Theory and Stochastic Modelling at Aarhus University taken by students of Math, Data Science and Computer Science (i.e. not the course taken by Engineers that is similar to SMP). That is, this exercise is one level above the level of the SMP course. The assignment had a weighting of $30 \%$ of the total exam which is a 4 hour written exam. These students are, however, expected to state all relevant calculations (i.e. not just use solve or sp.integrate). Naturally, you should use these tool. But if you are able to do this type of assignment, in about an hour or so, things are looking bright for you.
-
-Let $X$ denote the stochastic variable with the following PDF:
-
-$$
-f_X(x)= \begin{cases}\frac{3}{8} x^2 & 0<x<2 \\ 0 & \text { otherwise }\end{cases}
-$$
-
-1. Find $P(X>3 / 4)$ and $P(X<3 / 4)$.
-2. Find $E[(X+2) / 3]$ and $E\left[X^2\right]$
-3. Let $Z=e^{2 X}$ and find the probability density function of $Z$ for all $z \in \mathbb{R}$.
-
-Let $Y$ denote the stochastic variable that is independent to $X$ and has the distribution as $X$, i.e. $Y$ has the following PDF:
-
-$$
-f_Y(y)= \begin{cases}\frac{3}{8} y^2 & 0<y<2 \\ 0 & \text { otherwise }\end{cases}
-$$
-
-4. Find $\operatorname{Cov}(2 X+3 Y, X-4 Y+9)$.
-5. Find $P(X \cdot Y<1)$.
+---

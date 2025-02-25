@@ -1,4 +1,4 @@
-<h1 align="center">Multivariate Random Variables</h1>
+<h1 align="center">Normal and Exponential Distributions  and Multivariate Random Variables</h1>
 
 ### Session Preparation:
 ASPE: 5 (not 5.5-5.8)
@@ -168,122 +168,122 @@ Let the simultaneous probability mass function (also called simultaneous probabi
         \(\text{Var}(X) =2.04\)
 
 #### Exercise 3
-Consider the following PDF:
+Let $X \sim N(3,9)$.
 
-\[
-f_{Y \mid X}(y) = x \cdot e^{-xy} \qquad \text{for } y > 0
-\]
-
-1. Find \(P(Y < 2 \mid X = 2)\)
-
-2. Find \(E(Y \mid X = 2)\)
+1. Find $P(X>0)$.
+2. Find $P(-3<X<8)$.
+3. Find $P(X>5 | X>3)$.
 
 ??? answer
-    1. \(P(Y < 2 \mid X = 2) = 1 - e^{-4} \approx 0.98\)
-    
-    2. \(E(Y \mid X = 2) = \frac{1}{2}\)
+    1. \(P(X>0)=\Phi(1) \approx 0.8413\)
+    2. \(P(-3<X<8)=\Phi\left(\frac{5}{3}\right)-\Phi(-2) \approx 0.9295\).
+    3. \(P(X>5 \mid X>3)=2 \times\left(1-\Phi\left(\frac{2}{3}\right)\right) \approx 0.5050\)
 
 #### Exercise 4
-Consider two random variables \(X\) and \(Y\) with joint PMF given by:
+Let $X \sim N(3,9)$ and $Y=5-X$.
 
-\[
-P_{X Y}(k, l) = \frac{1}{2^{k+l}}, \quad \text{for } k, l = 1, 2, 3, \ldots
-\]
-
-Find \(P\left(X^2 + Y^2 \leq 10\right)\).
+1. Find $P(X>2)$.
+2. Find $P(-1<Y<3)$.
+3. Find $P(X>4 |Y<2)$.
 
 ??? answer
-    \(P\left(X^2 + Y^2 \leq 10\right) = \frac{11}{16}\)
+    1. \(P(X>2)=1-\Phi\left(\frac{1}{3}\right) \approx 0.6306\)
+    2. \(P(-1<Y<3)=\Phi\left(\frac{1}{3}\right)-\Phi(-1) \approx 0.4719 \).
+    3. \(P(X>4 \mid Y<2)=2\left(1-\Phi\left(\frac{1}{3}\right)\right) \approx 0.7389 .\)
 
-#### Exercise 5
-Let \(X\) and \(Y\) be two jointly continuous random variables with joint PDF:
 
-\[
-f_{XY}(x, y) =
-\begin{cases}
-\frac{1}{2} e^{-x} + \frac{cy}{(1+x)^2}, & 0 \leq x, \quad 0 \leq y \leq 1, \\
-0, & \text{otherwise}.
-\end{cases}
-\]
+#### Exercise 5 (Exam 2014.3 (not a-c))
+A central database server receives, on the average, 25 requests per second from its clients. Assuming that requests received by a database follow a Poisson distribution
 
-1. Find the constant \(c\).
+<ol start="1">
+    <li>What is the probability that the server will receive no requests in a 10-millisecond interval?</li>
+    <li>What is the probability that the server will receive more than 2 requests in a 10-millisecond interval?</li>
+    <li>What is the probability that the server will receive between 2 and 4 (both included) requests in a 20-millisecond interval?</li>
+</ol>
 
-2. Find \(P(0 \leq X \leq 1, 0 \leq Y \leq \frac{1}{2})\).
+Let T be the time in seconds between requests.
 
-3. Find \(P(0 \leq X \leq 1)\).
+<ol start="4">
+    <li>What is the probability that less than or equal to 10 milliseconds will elapse between job requests?</li>
+    <li>What is the probability that more than 100 milliseconds will elapse between requests?</li>
+</ol>
 
-??? answer
-    1. \(c = 1\)
-    
-    2. \(P(0 \leq X \leq 1, 0 \leq Y \leq \frac{1}{2}) = \frac{5}{16}-\frac{1}{4 e}\)
-    
-    3. \(P(0 \leq X \leq 1) = \frac{3}{4}-\frac{1}{2 e}\)
-
-#### Exercise 6
-Let \(X\) and \(Y\) be two jointly continuous random variables with joint PDF:
-
-\[
-f_{XY}(x, y) =
-\begin{cases}
-e^{-xy}, & 1 \leq x \leq e, \quad y > 0, \\
-0, & \text{otherwise}.
-\end{cases}
-\]
-
-1. Find the marginal PDFs, \(f_X(x)\) and \(f_Y(y)\).
-
-2. Write an integral to compute \(P(0 \leq Y \leq 1, 1 \leq X \leq \sqrt{e})\).
 
 ??? answer
-    1. The marginal PDFs are:
-       
+    1. \(P(X=0) = 0.7788\)
+    2. \(P(X>2) = 0.0022\)
+    3. \(P(2 \leq X \leq 4) = 0.09\)
+    4. \(P(T \leq 0.01) = 0.2212\)
+    5. \(P(T > 0.1) = 0.0821\)
+
+#### Exercise 1 (only a-d)
+Consider the set of points in the set \(C\):
+
+\[
+C = \{(x, y) \mid x, y \in \mathbb{Z}, x^2 + |y| \leq 2\}.
+\]
+
+Suppose that we pick a point \((X, Y)\) from this set completely at random.
+
+1. What probability does each point have of being chosen?
+
+2. Find the joint and marginal PMFs of \(X\) and \(Y\).
+
+3. Find the conditional PMF of \(X\) given \(Y = 1\).
+
+4. Are \(X\) and \(Y\) independent?
+
+5. Find \(E[XY^2]\).
+
+6. Find \(E[X \mid Y = 1]\).
+
+7. Find \(\operatorname{Var}(X \mid Y = 1)\).
+
+8. Find \(E[X \mid |Y| \leq 1]\).
+
+9. Find \(E[X^2 \mid |Y| \leq 1]\).
+
+??? answer
+    1. 1/11
+
+    2. Find the joint and marginal PMFs of \(X\) and \(Y\).
+
         \[
         \begin{aligned}
-        & f_X(x)= \begin{cases}\frac{1}{x} & 1 \leq x \leq e \\
-        0 & \text { otherwise }\end{cases} \\
-        & f_Y(y)= \begin{cases}\frac{1}{y}\left(e^{-y}-e^{-e y}\right) & y>0 \\
-        0 & \text { otherwise }\end{cases}
+        & P_{X Y}(x, y)=\left\{\begin{array}{cc}
+        \frac{1}{11} & (x, y) \in C \\
+        0 & \text { otherwise }
+        \end{array}\right. \\
+        & P_Y(-2)=P_{X Y}(0,-2)=\frac{1}{11} \\
+        & P_Y(-1)=P_{X Y}(0,-1)+P_{X Y}(-1,-1)+P_{X Y}(1,-1)=\frac{3}{11} \\
+        & P_Y(0)=P_{X Y}(0,0)+P_{X Y}(1,0)+P_{X Y}(-1,0)=\frac{3}{11} \\
+        & P_Y(1)=P_{X Y}(0,1)+P_{X Y}(-1,1)+P_{X Y}(1,1)=\frac{3}{11} \\
+        & P_Y(2)=P_{X Y}(0,2)=\frac{1}{11} \\
+        & P_X(i)=\left\{\begin{array}{cc}
+        \frac{3}{11} & \text { for } i=-1,1 \\
+        \frac{5}{11} & \text { for } i=0 \\
+        0 & \text { otherwise }
+        \end{array}\right.
         \end{aligned}
         \]
 
-    2. \[P(0 \leq Y \leq 1,1 \leq X \leq \sqrt{e})=\int_1^{\sqrt{e}} \frac{1}{x}-\frac{1}{x} e^{-x} d x\]
-
-#### Exercise 7
-Let \(X\) and \(Y\) be two jointly continuous random variables with joint PDF:
-
-\[
-f_{XY}(x, y) =
-\begin{cases}
-\frac{1}{4}x^2 + \frac{1}{6}y, & -1 \leq x \leq 1, \quad 0 \leq y \leq 2, \\
-0, & \text{otherwise}.
-\end{cases}
-\]
-
-1. Find the marginal PDFs, \(f_X(x)\) and \(f_Y(y)\).
-
-2. Find \(P(X > 0, Y < 1)\).
-
-3. Find \(P(X > 0 \text{ or } Y < 1)\).
-
-4. Find \(P(X > 0 \mid Y < 1)\).
-
-5. Find \(P(X + Y > 0)\).
-
-??? answer
-    1. The marginal PDFs, \(f_X(x)\) and \(f_Y(y)\).
+    3. Find the conditional PMF of \(X\) given \(Y = 1\).
    
         \[
         \begin{aligned}
-        & f_X(x)=\left\{\begin{array}{lc}
-        \frac{1}{2} x^2+\frac{1}{3} & -1 \leq x \leq 1 \\
-        0 & \text { otherwise }
-        \end{array}\right. \\
-        & f_Y(y)= \begin{cases}\frac{1}{6}+\frac{1}{3} y & 0 \leq y \leq 2 \\
-        0 & \text { otherwise }\end{cases}
+        P_{X \mid Y}(i \mid 1) & =\frac{P_{X Y}(i, 1)}{P_Y(1)} \\
+        & =\frac{\frac{1}{11}}{\frac{3}{11}}=\frac{1}{3}, \quad \text { for } i=-1,0,1 .
         \end{aligned}
         \]
 
-    2. \(P(X > 0, Y < 1)\) = 1/6.
-    3. \(P(X > 0 \text{ or } Y < 1)=2/3\).
-    4. \(P(X > 0 \mid Y < 1)=1/2\).
-    5. \(P(X + Y > 0)=131/144\).
+    4. No
+
+    5. \(E[XY^2]=0\).
+
+    6. \(E[X \mid Y = 1]=0\).
+
+    7. \(\operatorname{Var}(X \mid Y = 1)=2/3\).
+
+    8. \(E[X \mid |Y| \leq 1]=0\).
+
+    9.  \(E[X^2 \mid |Y| \leq 1]=2/3\).

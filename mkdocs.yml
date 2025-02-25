@@ -141,8 +141,8 @@ nav:
     - 01 Introduction to Probability and Random Variables: 01_Introduction_+_Recap_Probability_+_Stochastic_Variables/README.md
     - 02 Discrete Random Variables: 02_Discrete_Random_Variables/README.md
     - 03 Continuous Random Variables: 03_Continuous_Random_Variables/README.md
-    - 04 Multivariate Random Variables: 04_Multivariate_Random_Variables/README.md
-    - 05 Point Estimation and Sampling: 05_Point_Estimation_and_sampling/README.md
+    - 04 Normal and Exponential Distributions  and Multivariate Random Variables: 04_Multivariate_Random_Variables/README.md
+    - 05 Multivariate Random Variables: 05_MVR_part_2/README.md
     - 06 Statistical Intervals: 06_Statistical_Intervals/README.md
     - 07 Hypothesis Testing: 07_Hypothesis_Testing/README.md
     - 08 Regression: 08_Regression/README.md
