@@ -7,7 +7,7 @@ Solve the [exercises from session 3](https://rbrooksdk.github.io/SMP1_25/03_Cont
 
 ### Session Material
 
-[Recap Notes](https://drive.google.com/file/d/11gXQe7aVguAOqxRTPnz_CAfWfAwm_p3X/view?usp=sharing)
+[Recap Notes](https://drive.google.com/file/d/11-lAHXLQO_PRv2xqHwjoZv66-PY9X-9x/view?usp=sharing)
 
 [CRVs Part 2 Notes](https://drive.google.com/file/d/1fBRTsno83ezsVh-VThX5j31NeXG-n_SL/view?usp=sharing)
 
