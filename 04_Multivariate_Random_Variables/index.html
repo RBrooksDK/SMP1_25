@@ -18,7 +18,7 @@
         <link rel="prev" href="../03_Continuous_Random_Variables/">
       
       
-        <link rel="next" href="../05_Point_Estimation_and_sampling/">
+        <link rel="next" href="../05_MVR_part_2/">
       
       
       <link rel="icon" href="../figures/fav.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>04 Multivariate Random Variables - Stochastic Modelling and Processes</title>
+        <title>04 Normal and Exponential Distributions and Multivariate Random Variables - Stochastic Modelling and Processes</title>
       
     
     
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              04 Multivariate Random Variables
+              04 Normal and Exponential Distributions  and Multivariate Random Variables
             
           </span>
         </div>
@@ -525,7 +525,7 @@
           
   
   <span class="md-ellipsis">
-    04 Multivariate Random Variables
+    04 Normal and Exponential Distributions  and Multivariate Random Variables
     
   </span>
   
@@ -537,7 +537,7 @@
         
   
   <span class="md-ellipsis">
-    04 Multivariate Random Variables
+    04 Normal and Exponential Distributions  and Multivariate Random Variables
     
   </span>
   
@@ -646,27 +646,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-5" class="md-nav__link">
+  <a href="#exercise-5-exam-20143-not-a-c" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercise 5
+      Exercise 5 (Exam 2014.3 (not a-c))
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-6" class="md-nav__link">
+  <a href="#exercise-1-only-a-d" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercise 6
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-7" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercise 7
+      Exercise 1 (only a-d)
     </span>
   </a>
   
@@ -693,11 +684,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_Point_Estimation_and_sampling/" class="md-nav__link">
+      <a href="../05_MVR_part_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    05 Point Estimation and Sampling
+    05 Multivariate Random Variables
     
   </span>
   
@@ -1023,27 +1014,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-5" class="md-nav__link">
+  <a href="#exercise-5-exam-20143-not-a-c" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercise 5
+      Exercise 5 (Exam 2014.3 (not a-c))
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-6" class="md-nav__link">
+  <a href="#exercise-1-only-a-d" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercise 6
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-7" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercise 7
+      Exercise 1 (only a-d)
     </span>
   </a>
   
@@ -1073,7 +1055,7 @@
   
 
 
-<h1 align="center">Multivariate Random Variables</h1>
+<h1 align="center">Normal and Exponential Distributions  and Multivariate Random Variables</h1>
 
 <h3 id="session-preparation">Session Preparation:<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h3>
 <p>ASPE: 5 (not 5.5-5.8)</p>
@@ -1289,157 +1271,148 @@ f_Y(y) =
 </ol>
 </details>
 <h4 id="exercise-3">Exercise 3<a class="headerlink" href="#exercise-3" title="Permanent link">&para;</a></h4>
-<p>Consider the following PDF:</p>
-<div class="arithmatex">\[
-f_{Y \mid X}(y) = x \cdot e^{-xy} \qquad \text{for } y &gt; 0
-\]</div>
+<p>Let <span class="arithmatex">\(X \sim N(3,9)\)</span>.</p>
 <ol>
-<li>
-<p>Find <span class="arithmatex">\(P(Y &lt; 2 \mid X = 2)\)</span></p>
-</li>
-<li>
-<p>Find <span class="arithmatex">\(E(Y \mid X = 2)\)</span></p>
-</li>
+<li>Find <span class="arithmatex">\(P(X&gt;0)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(-3&lt;X&lt;8)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(X&gt;5 | X&gt;3)\)</span>.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
 <ol>
-<li>
-<p><span class="arithmatex">\(P(Y &lt; 2 \mid X = 2) = 1 - e^{-4} \approx 0.98\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(E(Y \mid X = 2) = \frac{1}{2}\)</span></p>
-</li>
+<li><span class="arithmatex">\(P(X&gt;0)=\Phi(1) \approx 0.8413\)</span></li>
+<li><span class="arithmatex">\(P(-3&lt;X&lt;8)=\Phi\left(\frac{5}{3}\right)-\Phi(-2) \approx 0.9295\)</span>.</li>
+<li><span class="arithmatex">\(P(X&gt;5 \mid X&gt;3)=2 \times\left(1-\Phi\left(\frac{2}{3}\right)\right) \approx 0.5050\)</span></li>
 </ol>
 </details>
 <h4 id="exercise-4">Exercise 4<a class="headerlink" href="#exercise-4" title="Permanent link">&para;</a></h4>
-<p>Consider two random variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> with joint PMF given by:</p>
-<div class="arithmatex">\[
-P_{X Y}(k, l) = \frac{1}{2^{k+l}}, \quad \text{for } k, l = 1, 2, 3, \ldots
-\]</div>
-<p>Find <span class="arithmatex">\(P\left(X^2 + Y^2 \leq 10\right)\)</span>.</p>
-<details class="answer">
-<summary>Answer</summary>
-<p><span class="arithmatex">\(P\left(X^2 + Y^2 \leq 10\right) = \frac{11}{16}\)</span></p>
-</details>
-<h4 id="exercise-5">Exercise 5<a class="headerlink" href="#exercise-5" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be two jointly continuous random variables with joint PDF:</p>
-<div class="arithmatex">\[
-f_{XY}(x, y) =
-\begin{cases}
-\frac{1}{2} e^{-x} + \frac{cy}{(1+x)^2}, &amp; 0 \leq x, \quad 0 \leq y \leq 1, \\
-0, &amp; \text{otherwise}.
-\end{cases}
-\]</div>
+<p>Let <span class="arithmatex">\(X \sim N(3,9)\)</span> and <span class="arithmatex">\(Y=5-X\)</span>.</p>
 <ol>
-<li>
-<p>Find the constant <span class="arithmatex">\(c\)</span>.</p>
-</li>
-<li>
-<p>Find <span class="arithmatex">\(P(0 \leq X \leq 1, 0 \leq Y \leq \frac{1}{2})\)</span>.</p>
-</li>
-<li>
-<p>Find <span class="arithmatex">\(P(0 \leq X \leq 1)\)</span>.</p>
-</li>
+<li>Find <span class="arithmatex">\(P(X&gt;2)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(-1&lt;Y&lt;3)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(X&gt;4 |Y&lt;2)\)</span>.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
 <ol>
-<li>
-<p><span class="arithmatex">\(c = 1\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(P(0 \leq X \leq 1, 0 \leq Y \leq \frac{1}{2}) = \frac{5}{16}-\frac{1}{4 e}\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(P(0 \leq X \leq 1) = \frac{3}{4}-\frac{1}{2 e}\)</span></p>
-</li>
+<li><span class="arithmatex">\(P(X&gt;2)=1-\Phi\left(\frac{1}{3}\right) \approx 0.6306\)</span></li>
+<li><span class="arithmatex">\(P(-1&lt;Y&lt;3)=\Phi\left(\frac{1}{3}\right)-\Phi(-1) \approx 0.4719 \)</span>.</li>
+<li><span class="arithmatex">\(P(X&gt;4 \mid Y&lt;2)=2\left(1-\Phi\left(\frac{1}{3}\right)\right) \approx 0.7389 .\)</span></li>
 </ol>
 </details>
-<h4 id="exercise-6">Exercise 6<a class="headerlink" href="#exercise-6" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be two jointly continuous random variables with joint PDF:</p>
+<h4 id="exercise-5-exam-20143-not-a-c">Exercise 5 (Exam 2014.3 (not a-c))<a class="headerlink" href="#exercise-5-exam-20143-not-a-c" title="Permanent link">&para;</a></h4>
+<p>A central database server receives, on the average, 25 requests per second from its clients. Assuming that requests received by a database follow a Poisson distribution</p>
+<ol start="1">
+    <li>What is the probability that the server will receive no requests in a 10-millisecond interval?</li>
+    <li>What is the probability that the server will receive more than 2 requests in a 10-millisecond interval?</li>
+    <li>What is the probability that the server will receive between 2 and 4 (both included) requests in a 20-millisecond interval?</li>
+</ol>
+
+<p>Let T be the time in seconds between requests.</p>
+<ol start="4">
+    <li>What is the probability that less than or equal to 10 milliseconds will elapse between job requests?</li>
+    <li>What is the probability that more than 100 milliseconds will elapse between requests?</li>
+</ol>
+
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li><span class="arithmatex">\(P(X=0) = 0.7788\)</span></li>
+<li><span class="arithmatex">\(P(X&gt;2) = 0.0022\)</span></li>
+<li><span class="arithmatex">\(P(2 \leq X \leq 4) = 0.09\)</span></li>
+<li><span class="arithmatex">\(P(T \leq 0.01) = 0.2212\)</span></li>
+<li><span class="arithmatex">\(P(T &gt; 0.1) = 0.0821\)</span></li>
+</ol>
+</details>
+<h4 id="exercise-1-only-a-d">Exercise 1 (only a-d)<a class="headerlink" href="#exercise-1-only-a-d" title="Permanent link">&para;</a></h4>
+<p>Consider the set of points in the set <span class="arithmatex">\(C\)</span>:</p>
 <div class="arithmatex">\[
-f_{XY}(x, y) =
-\begin{cases}
-e^{-xy}, &amp; 1 \leq x \leq e, \quad y &gt; 0, \\
-0, &amp; \text{otherwise}.
-\end{cases}
+C = \{(x, y) \mid x, y \in \mathbb{Z}, x^2 + |y| \leq 2\}.
 \]</div>
+<p>Suppose that we pick a point <span class="arithmatex">\((X, Y)\)</span> from this set completely at random.</p>
 <ol>
 <li>
-<p>Find the marginal PDFs, <span class="arithmatex">\(f_X(x)\)</span> and <span class="arithmatex">\(f_Y(y)\)</span>.</p>
+<p>What probability does each point have of being chosen?</p>
 </li>
 <li>
-<p>Write an integral to compute <span class="arithmatex">\(P(0 \leq Y \leq 1, 1 \leq X \leq \sqrt{e})\)</span>.</p>
+<p>Find the joint and marginal PMFs of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>.</p>
+</li>
+<li>
+<p>Find the conditional PMF of <span class="arithmatex">\(X\)</span> given <span class="arithmatex">\(Y = 1\)</span>.</p>
+</li>
+<li>
+<p>Are <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> independent?</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[XY^2]\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[X \mid Y = 1]\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(\operatorname{Var}(X \mid Y = 1)\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[X \mid |Y| \leq 1]\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[X^2 \mid |Y| \leq 1]\)</span>.</p>
 </li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
 <ol>
 <li>
-<p>The marginal PDFs are:</p>
+<p>1/11</p>
+</li>
+<li>
+<p>Find the joint and marginal PMFs of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>.</p>
 <div class="arithmatex">\[
 \begin{aligned}
-&amp; f_X(x)= \begin{cases}\frac{1}{x} &amp; 1 \leq x \leq e \\
-0 &amp; \text { otherwise }\end{cases} \\
-&amp; f_Y(y)= \begin{cases}\frac{1}{y}\left(e^{-y}-e^{-e y}\right) &amp; y&gt;0 \\
-0 &amp; \text { otherwise }\end{cases}
-\end{aligned}
-\]</div>
-</li>
-<li>
-<div class="arithmatex">\[P(0 \leq Y \leq 1,1 \leq X \leq \sqrt{e})=\int_1^{\sqrt{e}} \frac{1}{x}-\frac{1}{x} e^{-x} d x\]</div>
-</li>
-</ol>
-</details>
-<h4 id="exercise-7">Exercise 7<a class="headerlink" href="#exercise-7" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be two jointly continuous random variables with joint PDF:</p>
-<div class="arithmatex">\[
-f_{XY}(x, y) =
-\begin{cases}
-\frac{1}{4}x^2 + \frac{1}{6}y, &amp; -1 \leq x \leq 1, \quad 0 \leq y \leq 2, \\
-0, &amp; \text{otherwise}.
-\end{cases}
-\]</div>
-<ol>
-<li>
-<p>Find the marginal PDFs, <span class="arithmatex">\(f_X(x)\)</span> and <span class="arithmatex">\(f_Y(y)\)</span>.</p>
-</li>
-<li>
-<p>Find <span class="arithmatex">\(P(X &gt; 0, Y &lt; 1)\)</span>.</p>
-</li>
-<li>
-<p>Find <span class="arithmatex">\(P(X &gt; 0 \text{ or } Y &lt; 1)\)</span>.</p>
-</li>
-<li>
-<p>Find <span class="arithmatex">\(P(X &gt; 0 \mid Y &lt; 1)\)</span>.</p>
-</li>
-<li>
-<p>Find <span class="arithmatex">\(P(X + Y &gt; 0)\)</span>.</p>
-</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<ol>
-<li>
-<p>The marginal PDFs, <span class="arithmatex">\(f_X(x)\)</span> and <span class="arithmatex">\(f_Y(y)\)</span>.</p>
-<div class="arithmatex">\[
-\begin{aligned}
-&amp; f_X(x)=\left\{\begin{array}{lc}
-\frac{1}{2} x^2+\frac{1}{3} &amp; -1 \leq x \leq 1 \\
+&amp; P_{X Y}(x, y)=\left\{\begin{array}{cc}
+\frac{1}{11} &amp; (x, y) \in C \\
 0 &amp; \text { otherwise }
 \end{array}\right. \\
-&amp; f_Y(y)= \begin{cases}\frac{1}{6}+\frac{1}{3} y &amp; 0 \leq y \leq 2 \\
-0 &amp; \text { otherwise }\end{cases}
+&amp; P_Y(-2)=P_{X Y}(0,-2)=\frac{1}{11} \\
+&amp; P_Y(-1)=P_{X Y}(0,-1)+P_{X Y}(-1,-1)+P_{X Y}(1,-1)=\frac{3}{11} \\
+&amp; P_Y(0)=P_{X Y}(0,0)+P_{X Y}(1,0)+P_{X Y}(-1,0)=\frac{3}{11} \\
+&amp; P_Y(1)=P_{X Y}(0,1)+P_{X Y}(-1,1)+P_{X Y}(1,1)=\frac{3}{11} \\
+&amp; P_Y(2)=P_{X Y}(0,2)=\frac{1}{11} \\
+&amp; P_X(i)=\left\{\begin{array}{cc}
+\frac{3}{11} &amp; \text { for } i=-1,1 \\
+\frac{5}{11} &amp; \text { for } i=0 \\
+0 &amp; \text { otherwise }
+\end{array}\right.
 \end{aligned}
 \]</div>
 </li>
 <li>
-<p><span class="arithmatex">\(P(X &gt; 0, Y &lt; 1)\)</span> = &#8537;.</p>
+<p>Find the conditional PMF of <span class="arithmatex">\(X\)</span> given <span class="arithmatex">\(Y = 1\)</span>.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P_{X \mid Y}(i \mid 1) &amp; =\frac{P_{X Y}(i, 1)}{P_Y(1)} \\
+&amp; =\frac{\frac{1}{11}}{\frac{3}{11}}=\frac{1}{3}, \quad \text { for } i=-1,0,1 .
+\end{aligned}
+\]</div>
 </li>
-<li><span class="arithmatex">\(P(X &gt; 0 \text{ or } Y &lt; 1)=2/3\)</span>.</li>
-<li><span class="arithmatex">\(P(X &gt; 0 \mid Y &lt; 1)=1/2\)</span>.</li>
-<li><span class="arithmatex">\(P(X + Y &gt; 0)=131/144\)</span>.</li>
+<li>
+<p>No</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[XY^2]=0\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[X \mid Y = 1]=0\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\operatorname{Var}(X \mid Y = 1)=2/3\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[X \mid |Y| \leq 1]=0\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[X^2 \mid |Y| \leq 1]=2/3\)</span>.</p>
+</li>
 </ol>
 </details>
 
@@ -1496,13 +1469,13 @@ f_{XY}(x, y) =
         
         
           
-          <a href="../05_Point_Estimation_and_sampling/" class="md-footer__link md-footer__link--next" aria-label="Next: 05 Point Estimation and Sampling">
+          <a href="../05_MVR_part_2/" class="md-footer__link md-footer__link--next" aria-label="Next: 05 Multivariate Random Variables">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                05 Point Estimation and Sampling
+                05 Multivariate Random Variables
               </div>
             </div>
             <div class="md-footer__button md-icon">
