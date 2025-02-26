@@ -57,7 +57,7 @@ Let the simultaneous probability mass function (also called simultaneous probabi
 
 1. Find the marginal PMFs of \(X\) and \(Y\).
 
-2. Find \(E[X]\), \(E[Y]\), and \(E[XY]\).
+2. Find \(E[X]\), \(E[Y]\), and \(E[XY]\). Hint: It works in more or less the same way as for one variable.
 
 3. Specify whether \(X\) and \(Y\) are independent.
 
@@ -94,7 +94,7 @@ Let the simultaneous probability mass function (also called simultaneous probabi
     4. \(f_{X \mid Y}(1 \mid 6)=0.5, \quad f_{X \mid Y}(2 \mid 6)=0, \quad f_{X \mid Y}(3 \mid 6)=0.5\)
 
 #### Exercise 2
-Let the simultaneous probability mass function (also called simultaneous probability density function or pdf) for the two discrete random variables \(X\) and \(Y\) be given by the table:
+Let the simultaneous probability mass function for the two discrete random variables \(X\) and \(Y\) be given by the table:
 
 <div class="center-table" markdown>
 
@@ -216,7 +216,7 @@ Let T be the time in seconds between requests.
     4. \(P(T \leq 0.01) = 0.2212\)
     5. \(P(T > 0.1) = 0.0821\)
 
-#### Exercise 1 (only a-d)
+#### Exercise 6 (only a-d)
 Consider the set of points in the set \(C\):
 
 \[
