@@ -79,7 +79,7 @@ Let the simultaneous probability mass function (also called simultaneous probabi
         \[
         f_Y(y) = 
         \begin{cases}
-        \frac{5}{12} & \text{for } y=5, \\
+        \frac{1}{12} & \text{for } y=5, \\
         \frac{4}{12} & \text{for } y=6, \\
         \frac{5}{12} & \text{for } y=7, \\
         \frac{2}{12} & \text{for } y=8, \\
@@ -138,7 +138,7 @@ Let the simultaneous probability mass function for the two discrete random varia
    
         \[
         \begin{aligned}
-        & f_X(x)= \begin{cases}\frac{4}{5} & x=4 \\
+        & f_X(x)= \begin{cases}\frac{4}{10} & x=4 \\
         \frac{1}{10} & x=5 \\
         \frac{1}{2} & x=7\end{cases} \\
         & f_Y(y)= \begin{cases}\frac{1}{10} & y=-3 \\
