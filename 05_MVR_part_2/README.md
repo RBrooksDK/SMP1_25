@@ -7,9 +7,11 @@ Solve the [exercises from session 4](https://rbrooksdk.github.io/SMP1_25/04_Mult
 
 ### Session Material
 
-[Recap Exercises]()
+[Recap Exercises](https://drive.google.com/file/d/15LXt_ODdG0qUIhZmrPiXvwHjChZpQwCH/view?usp=sharing)
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EnYOFBJCZ-hNtWAfipCS0pUB6xsNt8lOW1fDyq_l_vNqUg?e=BSqiaH)
+
+[Session notes](https://drive.google.com/file/d/1oUHWdzQZa62bTqsmLe_eRts7OpOEhFgJ/view?usp=sharing)
 
 Session from 20/21:
 
