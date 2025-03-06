@@ -13,7 +13,7 @@ Solve the [exercises from session 4](https://rbrooksdk.github.io/SMP1_25/04_Mult
 
 [Session notes](https://drive.google.com/file/d/1oUHWdzQZa62bTqsmLe_eRts7OpOEhFgJ/view?usp=sharing)
 
-Test?
+Troels er syg, så vi har en gæsteunderviser i dag.
 
 Session from 20/21:
 
