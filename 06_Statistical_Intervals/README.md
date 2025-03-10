@@ -15,10 +15,9 @@ Solve the [exercises from session 5](https://rbrooksdk.github.io/SMP1_25/05_Poin
 
 Sessions from 20/21:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZBIyMSuUz_Y?si=KxoNdKCAgff7l9ti" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lY7hLitDi-U?si=yLkFWoPkzkZFuSk2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZBIyMSuUz_Y?si=KxoNdKCAgff7l9ti" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Session Description
 You will most likely experience that the next 2–3 topics are a bit less complex than the previous three topics.
