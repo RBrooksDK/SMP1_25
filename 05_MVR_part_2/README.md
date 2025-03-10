@@ -167,7 +167,7 @@ f_{XY}(x, y) =
     3. \(P(0 \leq X \leq 1) = \frac{3}{4}-\frac{1}{2 e}\)
 
 
-#### Exercise 7
+#### Exercise 5
 Let $X$ be a continuous random variable with PDF
 
 $$
@@ -188,7 +188,7 @@ and let $Y=X^2$.
     2. $$ f_Y(y)=F_Y^{\prime}(y)= \begin{cases}\frac{5}{64} y \sqrt{y} & \text { for } 0 \leq y \leq 4 \\ 0 & \text { otherwise }\end{cases}$$
     3. $$ E Y=\frac{20}{7} $$
 
-#### Exercise 8
+#### Exercise 6
 Consider two random variables $X$ and $Y$ with joint PMF given in the Table
 <div class="center-table" markdown>
 
@@ -205,7 +205,7 @@ Consider two random variables $X$ and $Y$ with joint PMF given in the Table
     1. \(\operatorname{Cov}(X, Y)=\frac{1}{24}\)
     2. \(\rho(X, Y)\approx 0.11\)
 
-#### Exercise 9
+#### Exercise 7
 Let $X$ and $Y$ be two independent $N(0,1)$ random variables and
 
 $$
@@ -221,7 +221,7 @@ Find $\operatorname{Cov}(Z, W)$.
 ??? answer
     $$\operatorname{Cov}(Z, W)=-1$$
 
-#### Exercise 10
+#### Exercise 8
 Let $X$ denote the stochastic variable with the following PDF:
 
 $$
