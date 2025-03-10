@@ -7,9 +7,9 @@ Solve the [exercises from session 5](https://rbrooksdk.github.io/SMP1_25/05_Poin
 
 ### Session Material
 
-[Recap notes]()
+[Recap exercises](https://drive.google.com/file/d/1OZGJcv1RZfFxp31RFctEJI8GoogfeRmi/view?usp=sharing)
 
-[Session Notes]()
+[Session Notes](https://drive.google.com/file/d/1EFr1Pz5E2lyVtgxd2Lwj9O4SdvcyXw_x/view?usp=sharing)
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EoY5rMCapgZLjtOdxkhvvVoBh_QnTKnGGcTPPM5vjoHd4w?e=Itlujg)
 
@@ -47,6 +47,9 @@ Full solutions to the book exercises can be found in the [general resource folde
 </style>
 
 Note, sometimes we use '$=$' instead of '$\approx$' when we state probabilities with a given decimal precision.
+
+#### Exercise 0
+Also do exercises 6-8 from the previous session.
 
 #### Exercise 1 (Book 8.1.7)
 A manufacturer produces piston rings for an automobile engine. It is known that ring diameter is normally distributed with $\sigma=0.001$ millimeters. A random sample of 15 rings has a mean diameter of $\bar{x}=74.036$ millimeters.
