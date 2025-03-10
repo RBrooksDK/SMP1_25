@@ -232,11 +232,18 @@ $$
 2. Find $E[(X+2) / 3]$ and $E\left[X^2\right]$
 3. Let $Z=e^{2 X}$ and find the probability density function of $Z$ for all $z \in \mathbb{R}$.
 
-Let $Y$ denote the stochastic variable that is independent to $X$ and has the distribution as $X$, i.e. $Y$ has the following PDF:
+    Let $Y$ denote the stochastic variable that is independent to $X$ and has the distribution as $X$, i.e. $Y$ has the following PDF:
 
-$$
-f_Y(y)= \begin{cases}\frac{3}{8} y^2 & 0<y<2 \\ 0 & \text { otherwise }\end{cases}
-$$
+    $$
+    f_Y(y)= \begin{cases}\frac{3}{8} y^2 & 0<y<2 \\ 0 & \text { otherwise }\end{cases}
+    $$
 
 4. Find $\operatorname{Cov}(2 X+3 Y, X-4 Y+9)$.
 5. Find $P(X \cdot Y<1)$.
+
+??? answer
+    1. $\approx 0.9473$ and $\approx 0.0527$
+    2. $\approx 1.667$ and $\approx 2.4$
+    3. $f_Z(y)=\left\{\begin{array}{lc}\frac{3}{64} \cdot z^{-1} \ln z & 1<z<e^4 \\ 0 & \text { else }\end{array}\right.$
+    4. $-3/2$
+    5. $\approx 0.08$
