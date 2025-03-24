@@ -12,7 +12,7 @@
         <meta name="author" content="Richard Brooks">
       
       
-        <link rel="canonical" href="https://rbrooksdk.github.io/MAL1_25/05%20Data%20preparation%20and%20feature%20engineering/">
+        <link rel="canonical" href="https://rbrooksdk.github.io/MAL1_25/06_Validation_methods_and_performance_metrics/">
       
       
       
@@ -341,6 +341,8 @@
         
       
         
+          
+        
       
         
       
@@ -507,31 +509,47 @@
 
   <h1>Index</h1>
 
-<h2 align="center">05 Data Preparation and Feature Engineering</h2>
+<h2 align="center">06 Validation Methods and Performance Metrics</h2>
 
 <h2 id="material">Material:<a class="headerlink" href="#material" title="Permanent link">&para;</a></h2>
-<p>Ch 2</p>
-<p><a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EomwA-aniDdHkkNiUUt4r7sBOWG0lWrheNTsjedMxW5_GQ?e=x3zvjO">Session material</a></p>
+<p>Ch 3</p>
+<p>Session material: In this folder</p>
 <h2 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">&para;</a></h2>
-<p>This lecture will cover the basics of how to prepare a data set for machine learning and add new features based on those already in the data set. The topic includes:</p>
+<p>This lecture will cover several machine learning methodologies:</p>
 <ul>
-<li>Data cleaning: What to do with missing values, outliers, nonsensical values</li>
-<li>Box Plots and other exploratory visualisations</li>
-<li>Data imputation</li>
-<li>Feature engineering:</li>
-<li>Dummy variables</li>
-<li>Scaling</li>
+<li>The train/test-methodelogy</li>
+<li>The validation set methodology</li>
+<li>The cross-validation methodology</li>
+<li>The leave-one-out-methodology</li>
+</ul>
+<p>In addition to this, we will discuss what is meant by true/false positives/negatives, and explore alternative performance metrics (so far, we have only encountered the “accuracy”-metric):</p>
+<ul>
+<li>Accuracy</li>
+<li>Confusion matrix</li>
+<li>Recall</li>
+<li>Precision</li>
+<li>F1-score</li>
+<li>Precision-recall-curve</li>
 </ul>
 <p>After attending this lecture, reading the corresponding part of the book and doing exercises, I expect you to be able to:</p>
 <ul>
-<li>Know how to approach features and when to drop and/or engineer them for your specific purposes</li>
-<li>Prepare a dataset for ML. Specifically, you should be able to explain and perform each of the operations below:</li>
-<li>Handle missing values/NaN-values in appropriate ways</li>
-<li>Identify and handle outliers using a boxplot</li>
-<li>Create dummy variables</li>
-<li>Scale/normalize variables</li>
-<li>Create a bag-of-words-representation for text-data</li>
+<li>Describe the "validation set"-methodology</li>
+<li>Describe the "cross validation"-methodology</li>
+<li>Describe the "leave one out"-methodology</li>
+<li>Apply each of the 3 methodologies above in sklearn</li>
+<li>Do hyperparameter tuning in sklearn using each of the 3 methodologies above (e.g. using the GridSearchCV-function in sklearn)</li>
+<li>Explain and calculate (in python) the following performance metrics for supervised classification:</li>
+<li>Confusion matrix</li>
+<li>Accuracy</li>
+<li>Recall ( = "True Positive Rate" (TPR) )</li>
+<li>Precision ( = "Positive Prediction Rate" (PPR) )</li>
+<li>F1-score</li>
+<li>Precision-recall-curve</li>
 </ul>
+<p><strong>Useful resources:</strong></p>
+<p><a href="https://www.kaggle.com/code/usengecoder/performance-metrics-for-classification-problems">Performance Metrics for Classification Problems</a></p>
+<p><a href="https://neptune.ai/blog/performance-metrics-in-machine-learning-complete-guide">Performance Metrics in Machine Learning</a></p>
+<p><a href="https://neptune.ai/blog/evaluation-metrics-binary-classification">24 Evaluation Metrics for Binary Classification</a></p>
 
 
 
