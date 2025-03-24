@@ -12,7 +12,7 @@
         <meta name="author" content="Richard Brooks">
       
       
-        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_25/08_Regression/Calculating%20metrics/">
+        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_25/08_Regression/Calculating_metrics/">
       
       
       
@@ -882,46 +882,61 @@ n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \
 \end{aligned}
 $$</p>
 <p>Fit a simple linear regression model between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> by finding out the estimates of intercept and slope. Hint: Use the Least Squares Estimates formula from the book.</p>
-<p><strong>Solution:</strong></p>
-<p>Given the values, we can use one of the variations provided earlier:</p>
-<div class="arithmatex">\[
+<details>
+  <summary>Click here to see the solution</summary>
+
+<p>Given the values, we can use one of the variations provided earlier:
+
+$$
 \beta_1 = \frac{\sum_{i=1}^n x_i y_i - n \overline{x} \overline{y}}{\sum_{i=1}^n x_i^2 - n \overline{x}^2}
-\]</div>
-<p>Let's plug in the values:</p>
-<ul>
-<li><span class="arithmatex">\(n = 12\)</span></li>
-<li><span class="arithmatex">\(\overline{x} = 4\)</span></li>
-<li><span class="arithmatex">\(\overline{y} = 12\)</span></li>
-<li><span class="arithmatex">\(\sum_{i=1}^n x_i^2 = 232\)</span></li>
-<li><span class="arithmatex">\(\sum_{i=1}^n x_i y_i = 318\)</span></li>
-</ul>
-<p>Calculating <span class="arithmatex">\(\beta_1\)</span>:</p>
-<div class="arithmatex">\[
+$$
+
+Let's plug in the values:
+
+- $n = 12$
+- $\overline{x} = 4$
+- $\overline{y} = 12$
+- $\sum_{i=1}^n x_i^2 = 232$
+- $\sum_{i=1}^n x_i y_i = 318$
+
+Calculating $\beta_1$:
+
+$$
 \beta_1 = \frac{318 - 12 \times 4 \times 12}{232 - 12 \times 4^2}
-\]</div>
-<p>In the solution, the following formula, also presented above, is used:</p>
-<div class="arithmatex">\[
+$$
+
+In the solution, the following formula, also presented above, is used:
+
+$$
 \beta_1=\frac{n \sum\left(x_i y_i\right)-\sum x_i \sum y_i}{n \sum\left(x_i^2\right)-\left(\sum x_i\right)^2}
-\]</div>
-<p>Plugging these values into the formula:
+$$
+
+Plugging these values into the formula:
 $$
 \beta_1=\frac{(12)(318)-[(12)(4)][(12)(12)]}{(12)(232)-[(12)(4)]^2}
-$$</p>
-<p>Once we have <span class="arithmatex">\(\beta_1\)</span>, we can calculate the intercept <span class="arithmatex">\(\beta_0\)</span> using the formula:</p>
-<div class="arithmatex">\[
+$$
+
+
+Once we have $\beta_1$, we can calculate the intercept $\beta_0$ using the formula:
+
+$$
 \beta_0 = \overline{y} - \beta_1 \overline{x}
-\]</div>
-<p>We'll compute <span class="arithmatex">\(\beta_1\)</span> first and then use it to find <span class="arithmatex">\(\beta_0\)</span>.</p>
-<p>Using the provided data, the estimated parameters for your linear regression model are:</p>
-<ul>
-<li>Slope (<span class="arithmatex">\(\beta_1\)</span>): <span class="arithmatex">\(-6.45\)</span></li>
-<li>Intercept (<span class="arithmatex">\(\beta_0\)</span>): <span class="arithmatex">\(37.8\)</span></li>
-</ul>
-<p>Thus, the fitted linear regression model can be expressed as:
+$$
+
+We'll compute $\beta_1$ first and then use it to find $\beta_0$.
+
+Using the provided data, the estimated parameters for your linear regression model are:
+
+- Slope ($\beta_1$): $-6.45$
+- Intercept ($\beta_0$): $37.8$
+
+Thus, the fitted linear regression model can be expressed as:
 $$
 y = 37.8 - 6.45x
 $$
-This equation predicts the value of <span class="arithmatex">\(y\)</span> based on the value of <span class="arithmatex">\(x\)</span>, with the model suggesting that <span class="arithmatex">\(y\)</span> decreases by approximately 6.45 units for every one unit increase in <span class="arithmatex">\(x\)</span>.</p>
+This equation predicts the value of $y$ based on the value of $x$, with the model suggesting that $y$ decreases by approximately 6.45 units for every one unit increase in $x$.</p>
+
+</details>
 
 
 
