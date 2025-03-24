@@ -12,7 +12,7 @@
         <meta name="author" content="Richard Brooks">
       
       
-        <link rel="canonical" href="https://rbrooksdk.github.io/MAL1_25/blog/">
+        <link rel="canonical" href="https://rbrooksdk.github.io/MAL1_25/03_Tree-based_models/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Blog - Introduction to Machine Learning and AI</title>
+        <title>Index - Introduction to Machine Learning and AI</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#material" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              Index
             
           </span>
         </div>
@@ -457,8 +457,32 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -467,16 +491,71 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
-      </header>
-      
-      
-    </div>
-  </div>
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
 
+  
+  
+
+
+  <h1>Index</h1>
+
+<h2 align="center">03 Tree-based Models</h2>
+
+<h2 id="material">Material:<a class="headerlink" href="#material" title="Permanent link">&para;</a></h2>
+<p>Ch 6 + 7</p>
+<p>Session material: In this folder.</p>
+<p>You will need to install the graphviz and pydotplus modules in python. You can do this by following these steps:</p>
+<p>1) Open the anaconda prompt<br />
+2) Install graphviz by typing <code>conda install python-graphviz</code>
+3) Install pydotplus by typing <code>conda install pydotplus</code></p>
+<p>Alternatively, if the above doesn't work:</p>
+<p>1) Go to <a href="https://graphviz.gitlab.io/_pages/Download/Download_windows.html">https://graphviz.gitlab.io/_pages/Download/Download_windows.html</a><br />
+   and download graphviz  </p>
+<p>2) Add the following to your code:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PATH&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">pathsep</span> <span class="o">+</span> <span class="s1">&#39;C:/Program Files (x86)/Graphviz2.38/bin/&#39;</span>
+</span></code></pre></div>
+<h2 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">&para;</a></h2>
+<p>This lecture covers <strong>decision trees</strong> and related methods. We will talk about:</p>
+<ul>
+<li>Decision trees</li>
+<li>Random forests</li>
+<li>Gradient-boosted decision trees</li>
+</ul>
+<hr />
+<p>After attending this lecture, reading the corresponding part of the book and doing exercises, I expect you to be able to:</p>
+<ul>
+<li>Use and implement decision trees, random forests and gradient boosted decision trees in python.  </li>
+<li>Describe the advantages and disadvantages of using decision trees, random forests and gradient boosted decision trees, respectively.</li>
+<li>Visualize decision trees in different ways.</li>
+<li>Extract and interpret feature importance.</li>
+<li>Describe how the Gini impurity index can be used to determine which feature to branch off on.</li>
+<li>Explain what is meant by pre-pruning.</li>
+<li>Explain how random forests are random, including what is meant by bootstrapping and feature selection in this context.</li>
+<li>Explain what is meant by soft voting.</li>
+<li>Discuss different hyperparameters of tree-based methods, and how tuning these parameters influence the results.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
