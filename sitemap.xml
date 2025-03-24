@@ -1,79 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/00_Important_Recap/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/01_Introduction_-_Machine_learning_fundamentals/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/01_Introduction_%2B_Recap_Probability_%2B_Stochastic_Variables/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/02_Naive_Bayes_and_support_vector_machines/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/02_Discrete_Random_Variables/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/03_Tree-based_models/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/03_Continuous_Random_Variables/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/04_The_machine_learning_pipeline_-_Introduction_to_final_project/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/04_Multivariate_Random_Variables/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/05_Data_preparation_and_feature_engineering/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/05_MVR_part_2/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/06_Validation_methods_and_performance_metrics/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/06_Statistical_Intervals/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/07_The_role_of_Linear_Algebra_in_Machine_Learning_and_AI/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/07_Hypothesis_Testing/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/08_Regression/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/08_Regression/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/09_Introduction_to_neural_networks/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/08_Regression/Calculating%20metrics/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/10_Dimensionality_reduction/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/08_Regression/Test/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/11_Clustering/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/09_Introduction_to_Stochastic_Processes/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/12_Recap/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/10_Markov_Chains/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/Sessions/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/11_Recap_and_Exercises_Markov_Chains/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/blog/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/Sessions/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/pages/exam/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
     <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/blog/</loc>
-         <lastmod>2025-03-24</lastmod>
-    </url>
-    <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/pages/exam/</loc>
-         <lastmod>2025-03-24</lastmod>
-    </url>
-    <url>
-         <loc>https://rbrooksdk.github.io/SMP1_25/pages/faq/</loc>
+         <loc>https://rbrooksdk.github.io/MAL1_S25/pages/faq/</loc>
          <lastmod>2025-03-24</lastmod>
     </url>
 </urlset>
