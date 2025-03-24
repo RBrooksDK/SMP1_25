@@ -12,13 +12,13 @@
         <meta name="author" content="Richard Brooks">
       
       
-        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_25/08_Regression/">
+        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_25/04_Multivariate_Random_Variables/">
       
       
-        <link rel="prev" href="../07_Hypothesis_Testing/">
+        <link rel="prev" href="../03_Continuous_Random_Variables/">
       
       
-        <link rel="next" href="../09_Introduction_to_Stochastic_Processes/">
+        <link rel="next" href="../05_MVR_part_2/">
       
       
       <link rel="icon" href="../figures/fav.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>08 Regression - Stochastic Modelling and Processes</title>
+        <title>04 Normal and Exponential Distributions and Multivariate Random Variables - Stochastic Modelling and Processes</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#material" class="md-skip">
+        <a href="#session-preparation" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08 Regression
+              04 Normal and Exponential Distributions  and Multivariate Random Variables
             
           </span>
         </div>
@@ -511,10 +511,29 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../04_Multivariate_Random_Variables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    04 Normal and Exponential Distributions  and Multivariate Random Variables
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -524,6 +543,135 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#session-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Preparation:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Material
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-exam-20143-not-a-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 5 (Exam 2014.3 (not a-c))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-6-only-a-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 6 (only a-d)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -599,29 +747,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    08 Regression
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../08_Regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,51 +760,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#material" class="md-nav__link">
-    <span class="md-ellipsis">
-      Material:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Topics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problems-to-be-worked-on-inafter-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problems to be worked on in/after class:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -842,29 +926,113 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#material" class="md-nav__link">
+  <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
-      Material:
+      Session Preparation:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
+  <a href="#session-material" class="md-nav__link">
     <span class="md-ellipsis">
-      Topics
+      Session Material
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems-to-be-worked-on-inafter-class" class="md-nav__link">
+  <a href="#session-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Problems to be worked on in/after class:
+      Session Description
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Session Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-exam-20143-not-a-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 5 (Exam 2014.3 (not a-c))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-6-only-a-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 6 (only a-d)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -887,30 +1055,366 @@
   
 
 
-<h1 align="center">08 Regression</h1>
+<h1 align="center">Normal and Exponential Distributions  and Multivariate Random Variables</h1>
 
-<h2 id="material">Material:<a class="headerlink" href="#material" title="Permanent link">&para;</a></h2>
-<p>ASPE: 11 (not 11.9)</p>
-<p><a href="https://drive.google.com/file/d/1A7HXGOLlSchKT6Xd7HYJUXkUqDv1hk9c/view?usp=sharing">Recap notes</a></p>
-<p><a href="https://drive.google.com/file/d/1COasq655j7b-M4eWaY2rxyPqoKi4zsZW/view?usp=sharing">Session notes</a></p>
-<p><a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ev05wEbMShxPn7BZdA0uAncBwWrvATthywVt7NfsbGJo6w?e=GGnrFa">Session material</a></p>
-<p>Session from 20/21: <a href="https://youtu.be/XmV8qxDEfkE">SMP 8</a></p>
-<h2 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">&para;</a></h2>
-<p>Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. The key elements of linear regression include the dependent variable, independent variable(s), regression coefficients, intercept, and residual error. The regression coefficients represent the change in the dependent variable associated with a one-unit change in the independent variable, while the intercept represents the expected value of the dependent variable when all independent variables are equal to zero. The residual error is the difference between the observed values of the dependent variable and the values predicted by the regression model. The goal of linear regression is to find the best-fitting line that minimizes the sum of the squared residual errors. Linear regression is a widely used method in various fields to make predictions or estimate the strength and direction of relationships between variables.</p>
+<h3 id="session-preparation">Session Preparation:<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h3>
+<p>ASPE: 5 (not 5.5-5.8)</p>
+<p>Solve the <a href="https://rbrooksdk.github.io/SMP1_25/03_Continuous_Random_Variables/#exercises">exercises from session 3</a> before class.</p>
+<h3 id="session-material">Session Material<a class="headerlink" href="#session-material" title="Permanent link">&para;</a></h3>
+<p><a href="https://drive.google.com/file/d/11-lAHXLQO_PRv2xqHwjoZv66-PY9X-9x/view?usp=sharing">Recap Notes</a></p>
+<p><a href="https://drive.google.com/file/d/1fBRTsno83ezsVh-VThX5j31NeXG-n_SL/view?usp=sharing">CRVs Part 2 Notes</a></p>
+<p><a href="https://drive.google.com/file/d/1oUHWdzQZa62bTqsmLe_eRts7OpOEhFgJ/view?usp=sharing">Session notes</a></p>
+<p><a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EoKqqy67NdBBk7Qnug21TH4BXHHtg2jlNNSF45_H9n7feg?e=3dBknY">Session material</a></p>
+<p>Session from 20/21:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v4rf4b2YPls?si=_VytJuuYP5z9z519" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<hr />
+<h3 id="session-description">Session Description<a class="headerlink" href="#session-description" title="Permanent link">&para;</a></h3>
+<p>This is arguably the most difficult of all the topics.</p>
+<p>Multivariate random variables are a collection of random variables that are correlated with each other. The most important elements of multivariate random variables include their mean vector, covariance matrix, and joint probability density function. The mean vector represents the average value of each variable, while the covariance matrix reflects the degree of correlation and variability among the variables. The joint probability density function specifies the probability of obtaining a particular combination of values for the variables. Understanding the key elements of multivariate random variables is crucial for performing statistical analyses, making predictions, and making decisions based on data.</p>
+<h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Least Squares Estimates</li>
-<li>Regression Equation</li>
-<li>Correlation</li>
-<li>Coefficient of determination</li>
-<li>Prediction</li>
-<li>Residual Analysis</li>
+<li>Joint Probability Distributions</li>
+<li>Conditional Probability Distributions</li>
+<li>Conditional Expectation</li>
+<li>Covariance and Correlation</li>
 </ul>
-<p>I've added a <a href="Calculating_metrics.ipynb">page</a> with all the useful formulas for calculating the parameters as well as the performance metrics, <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(r^2\)</span></p>
-<h2 id="problems-to-be-worked-on-inafter-class">Problems to be worked on in/after class:<a class="headerlink" href="#problems-to-be-worked-on-inafter-class" title="Permanent link">&para;</a></h2>
-<p>If nothing is noted, assume it is “Exam”. If it is the reexam, it will be stated.</p>
-<ul>
-<li>2020.4 (not f), 2020.5, 2020.6, 2020.7, Reexam 2018.4, Reexam 2018.5, Reexam 2018.6, 2018.6, 2017.4, 2017.5, 2017.6</li>
-</ul>
+<hr />
+<h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
+<p>Full solutions to the exercises can be found in <a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo">Session material</a>.</p>
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
+
+<h4 id="exercise-1">Exercise 1<a class="headerlink" href="#exercise-1" title="Permanent link">&para;</a></h4>
+<p>Let the simultaneous probability mass function (also called simultaneous probability density function or pdf) for the two discrete random variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be given by the table:</p>
+<div class="center-table">
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(y \backslash x\)</span></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td><span class="arithmatex">\(\frac{1}{12}\)</span></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td><span class="arithmatex">\(\frac{2}{12}\)</span></td>
+<td>0</td>
+<td><span class="arithmatex">\(\frac{2}{12}\)</span></td>
+</tr>
+<tr>
+<td>7</td>
+<td><span class="arithmatex">\(\frac{2}{12}\)</span></td>
+<td><span class="arithmatex">\(\frac{1}{12}\)</span></td>
+<td><span class="arithmatex">\(\frac{2}{12}\)</span></td>
+</tr>
+<tr>
+<td>8</td>
+<td>0</td>
+<td><span class="arithmatex">\(\frac{2}{12}\)</span></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>
+<p>Find the marginal PMFs of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[X]\)</span>, <span class="arithmatex">\(E[Y]\)</span>, and <span class="arithmatex">\(E[XY]\)</span>. Hint: It works in more or less the same way as for one variable.</p>
+</li>
+<li>
+<p>Specify whether <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are independent.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(f_{X \mid Y}(x \mid y=6)\)</span>.</p>
+</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p>The marginal PMFs of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are:</p>
+<div class="arithmatex">\[
+f_X(x) = 
+\begin{cases}
+\frac{5}{12} &amp; \text{for } x=1, \\
+\frac{1}{4} &amp; \text{for } x=2, \\
+\frac{1}{3} &amp; \text{for } x=3, \\
+0 &amp; \text{otherwise,}
+\end{cases}
+\]</div>
+<div class="arithmatex">\[
+f_Y(y) = 
+\begin{cases}
+\frac{1}{12} &amp; \text{for } y=5, \\
+\frac{4}{12} &amp; \text{for } y=6, \\
+\frac{5}{12} &amp; \text{for } y=7, \\
+\frac{2}{12} &amp; \text{for } y=8, \\
+0 &amp; \text{otherwise.}
+\end{cases}
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathrm{EX}=1.92, \mathrm{EY}=6.67, \mathrm{E}[\mathrm{XY}]=12.92\)</span></p>
+</li>
+<li>
+<p>Not</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f_{X \mid Y}(1 \mid 6)=0.5, \quad f_{X \mid Y}(2 \mid 6)=0, \quad f_{X \mid Y}(3 \mid 6)=0.5\)</span></p>
+</li>
+</ol>
+</details>
+<h4 id="exercise-2">Exercise 2<a class="headerlink" href="#exercise-2" title="Permanent link">&para;</a></h4>
+<p>Let the simultaneous probability mass function for the two discrete random variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be given by the table:</p>
+<div class="center-table">
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(y \backslash x\)</span></th>
+<th>4</th>
+<th>5</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-3</td>
+<td><span class="arithmatex">\(k\)</span></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>-1</td>
+<td><span class="arithmatex">\(\frac{2}{10}\)</span></td>
+<td>0</td>
+<td><span class="arithmatex">\(k\)</span></td>
+</tr>
+<tr>
+<td>0</td>
+<td><span class="arithmatex">\(\frac{1}{10}\)</span></td>
+<td>0</td>
+<td><span class="arithmatex">\(\frac{4}{10}\)</span></td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td><span class="arithmatex">\(k\)</span></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>
+<p>What is the value of <span class="arithmatex">\(k\)</span>?</p>
+</li>
+<li>
+<p>What are the marginal PMFs?</p>
+</li>
+<li>
+<p>Find:</p>
+<p><span class="arithmatex">\(E[X] =\)</span></p>
+<p><span class="arithmatex">\(E[Y] =\)</span></p>
+<p><span class="arithmatex">\(E[Y \cdot X] =\)</span></p>
+<p><span class="arithmatex">\(E[X^2] =\)</span></p>
+<p><span class="arithmatex">\(E[Y^2] =\)</span></p>
+<p><span class="arithmatex">\(P(Y &lt; 0) =\)</span></p>
+<p><span class="arithmatex">\(P(X = 5, Y &gt; 0) =\)</span></p>
+<p><span class="arithmatex">\(P(X &lt; 6, Y &lt; 0) =\)</span></p>
+<p><span class="arithmatex">\(\text{Var}(X) =\)</span></p>
+</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p><span class="arithmatex">\(k = \frac{1}{10}\)</span></p>
+</li>
+<li>
+<p>The marginal PMFs are:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; f_X(x)= \begin{cases}\frac{4}{10} &amp; x=4 \\
+\frac{1}{10} &amp; x=5 \\
+\frac{1}{2} &amp; x=7\end{cases} \\
+&amp; f_Y(y)= \begin{cases}\frac{1}{10} &amp; y=-3 \\
+\frac{3}{10} &amp; y=-1 \\
+\frac{1}{2} &amp; y=0 \\
+\frac{1}{10} &amp; y=5\end{cases}
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>Find:</p>
+<p><span class="arithmatex">\(E[X] =5.6\)</span></p>
+<p><span class="arithmatex">\(E[Y] =-0.1\)</span></p>
+<p><span class="arithmatex">\(E[Y \cdot X] =-0.2\)</span></p>
+<p><span class="arithmatex">\(E[X^2] =33.4\)</span></p>
+<p><span class="arithmatex">\(E[Y^2] =3.7\)</span></p>
+<p><span class="arithmatex">\(P(Y &lt; 0) =0.4\)</span></p>
+<p><span class="arithmatex">\(P(X = 5, Y &gt; 0) =0.1\)</span></p>
+<p><span class="arithmatex">\(P(X &lt; 6, Y &lt; 0) =0.3\)</span></p>
+<p><span class="arithmatex">\(\text{Var}(X) =2.04\)</span></p>
+</li>
+</ol>
+</details>
+<h4 id="exercise-3">Exercise 3<a class="headerlink" href="#exercise-3" title="Permanent link">&para;</a></h4>
+<p>Let <span class="arithmatex">\(X \sim N(3,9)\)</span>.</p>
+<ol>
+<li>Find <span class="arithmatex">\(P(X&gt;0)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(-3&lt;X&lt;8)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(X&gt;5 | X&gt;3)\)</span>.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li><span class="arithmatex">\(P(X&gt;0)=\Phi(1) \approx 0.8413\)</span></li>
+<li><span class="arithmatex">\(P(-3&lt;X&lt;8)=\Phi\left(\frac{5}{3}\right)-\Phi(-2) \approx 0.9295\)</span>.</li>
+<li><span class="arithmatex">\(P(X&gt;5 \mid X&gt;3)=2 \times\left(1-\Phi\left(\frac{2}{3}\right)\right) \approx 0.5050\)</span></li>
+</ol>
+</details>
+<h4 id="exercise-4">Exercise 4<a class="headerlink" href="#exercise-4" title="Permanent link">&para;</a></h4>
+<p>Let <span class="arithmatex">\(X \sim N(3,9)\)</span> and <span class="arithmatex">\(Y=5-X\)</span>.</p>
+<ol>
+<li>Find <span class="arithmatex">\(P(X&gt;2)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(-1&lt;Y&lt;3)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(X&gt;4 |Y&lt;2)\)</span>.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li><span class="arithmatex">\(P(X&gt;2)=1-\Phi\left(\frac{1}{3}\right) \approx 0.6306\)</span></li>
+<li><span class="arithmatex">\(P(-1&lt;Y&lt;3)=\Phi\left(\frac{1}{3}\right)-\Phi(-1) \approx 0.4719 \)</span>.</li>
+<li><span class="arithmatex">\(P(X&gt;4 \mid Y&lt;2)=2\left(1-\Phi\left(\frac{1}{3}\right)\right) \approx 0.7389 .\)</span></li>
+</ol>
+</details>
+<h4 id="exercise-5-exam-20143-not-a-c">Exercise 5 (Exam 2014.3 (not a-c))<a class="headerlink" href="#exercise-5-exam-20143-not-a-c" title="Permanent link">&para;</a></h4>
+<p>A central database server receives, on the average, 25 requests per second from its clients. Assuming that requests received by a database follow a Poisson distribution</p>
+<ol start="1">
+    <li>What is the probability that the server will receive no requests in a 10-millisecond interval?</li>
+    <li>What is the probability that the server will receive more than 2 requests in a 10-millisecond interval?</li>
+    <li>What is the probability that the server will receive between 2 and 4 (both included) requests in a 20-millisecond interval?</li>
+</ol>
+
+<p>Let T be the time in seconds between requests.</p>
+<ol start="4">
+    <li>What is the probability that less than or equal to 10 milliseconds will elapse between job requests?</li>
+    <li>What is the probability that more than 100 milliseconds will elapse between requests?</li>
+</ol>
+
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li><span class="arithmatex">\(P(X=0) = 0.7788\)</span></li>
+<li><span class="arithmatex">\(P(X&gt;2) = 0.0022\)</span></li>
+<li><span class="arithmatex">\(P(2 \leq X \leq 4) = 0.09\)</span></li>
+<li><span class="arithmatex">\(P(T \leq 0.01) = 0.2212\)</span></li>
+<li><span class="arithmatex">\(P(T &gt; 0.1) = 0.0821\)</span></li>
+</ol>
+</details>
+<h4 id="exercise-6-only-a-d">Exercise 6 (only a-d)<a class="headerlink" href="#exercise-6-only-a-d" title="Permanent link">&para;</a></h4>
+<p>Consider the set of points in the set <span class="arithmatex">\(C\)</span>:</p>
+<div class="arithmatex">\[
+C = \{(x, y) \mid x, y \in \mathbb{Z}, x^2 + |y| \leq 2\}.
+\]</div>
+<p>Suppose that we pick a point <span class="arithmatex">\((X, Y)\)</span> from this set completely at random.</p>
+<ol>
+<li>
+<p>What probability does each point have of being chosen?</p>
+</li>
+<li>
+<p>Find the joint and marginal PMFs of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>.</p>
+</li>
+<li>
+<p>Find the conditional PMF of <span class="arithmatex">\(X\)</span> given <span class="arithmatex">\(Y = 1\)</span>.</p>
+</li>
+<li>
+<p>Are <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> independent?</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[XY^2]\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[X \mid Y = 1]\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(\operatorname{Var}(X \mid Y = 1)\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[X \mid |Y| \leq 1]\)</span>.</p>
+</li>
+<li>
+<p>Find <span class="arithmatex">\(E[X^2 \mid |Y| \leq 1]\)</span>.</p>
+</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p>1/11</p>
+</li>
+<li>
+<p>Find the joint and marginal PMFs of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; P_{X Y}(x, y)=\left\{\begin{array}{cc}
+\frac{1}{11} &amp; (x, y) \in C \\
+0 &amp; \text { otherwise }
+\end{array}\right. \\
+&amp; P_Y(-2)=P_{X Y}(0,-2)=\frac{1}{11} \\
+&amp; P_Y(-1)=P_{X Y}(0,-1)+P_{X Y}(-1,-1)+P_{X Y}(1,-1)=\frac{3}{11} \\
+&amp; P_Y(0)=P_{X Y}(0,0)+P_{X Y}(1,0)+P_{X Y}(-1,0)=\frac{3}{11} \\
+&amp; P_Y(1)=P_{X Y}(0,1)+P_{X Y}(-1,1)+P_{X Y}(1,1)=\frac{3}{11} \\
+&amp; P_Y(2)=P_{X Y}(0,2)=\frac{1}{11} \\
+&amp; P_X(i)=\left\{\begin{array}{cc}
+\frac{3}{11} &amp; \text { for } i=-1,1 \\
+\frac{5}{11} &amp; \text { for } i=0 \\
+0 &amp; \text { otherwise }
+\end{array}\right.
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>Find the conditional PMF of <span class="arithmatex">\(X\)</span> given <span class="arithmatex">\(Y = 1\)</span>.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P_{X \mid Y}(i \mid 1) &amp; =\frac{P_{X Y}(i, 1)}{P_Y(1)} \\
+&amp; =\frac{\frac{1}{11}}{\frac{3}{11}}=\frac{1}{3}, \quad \text { for } i=-1,0,1 .
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>No</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[XY^2]=0\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[X \mid Y = 1]=0\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\operatorname{Var}(X \mid Y = 1)=2/3\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[X \mid |Y| \leq 1]=0\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E[X^2 \mid |Y| \leq 1]=2/3\)</span>.</p>
+</li>
+</ol>
+</details>
 
 
 
@@ -948,7 +1452,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../07_Hypothesis_Testing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 07 Hypothesis Testing">
+          <a href="../03_Continuous_Random_Variables/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 03 Continuous Random Variables">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -958,20 +1462,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                07 Hypothesis Testing
+                03 Continuous Random Variables
               </div>
             </div>
           </a>
         
         
           
-          <a href="../09_Introduction_to_Stochastic_Processes/" class="md-footer__link md-footer__link--next" aria-label="Next: 09 Introduction to Stochastic Processes">
+          <a href="../05_MVR_part_2/" class="md-footer__link md-footer__link--next" aria-label="Next: 05 Multivariate Random Variables Part 2">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                09 Introduction to Stochastic Processes
+                05 Multivariate Random Variables Part 2
               </div>
             </div>
             <div class="md-footer__button md-icon">
