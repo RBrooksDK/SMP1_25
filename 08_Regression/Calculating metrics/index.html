@@ -1,0 +1,1032 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Course page for Stochastic Modelling and Processes at VIA University College">
+      
+      
+        <meta name="author" content="Richard Brooks">
+      
+      
+        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_25/08_Regression/Calculating%20metrics/">
+      
+      
+      
+      
+      <link rel="icon" href="../../figures/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Calculating Metrics in Simple Linear Regression - Stochastic Modelling and Processes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010m-12%206%206-6-6-6-1.4%201.4%204.6%204.6-4.6%204.6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#calculating-metrics-in-simple-linear-regression" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Stochastic Modelling and Processes" class="md-header__button md-logo" aria-label="Stochastic Modelling and Processes" data-md-component="logo">
+      
+  <img src="../../figures/gaussian.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stochastic Modelling and Processes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calculating Metrics in Simple Linear Regression
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RBrooksDK/SMP1_25" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Stochastic Modelling and Processes" class="md-nav__button md-logo" aria-label="Stochastic Modelling and Processes" data-md-component="logo">
+      
+  <img src="../../figures/gaussian.png" alt="logo">
+
+    </a>
+    Stochastic Modelling and Processes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RBrooksDK/SMP1_25" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://rbrooksdk.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Richard Brooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../Sessions/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sessions
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pages/exam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pages/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Resources SMP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-slope-and-intercept" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Slope (and intercept)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Slope (and intercept)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#least-squares-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Least Squares Estimation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum-of-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sum of Products
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown-using-individual-sum-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown Using Individual Sum Terms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#covariance-and-variance-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covariance and Variance Method:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-algebra-using-normal-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix Algebra (Using Normal Equation):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Descent:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression-line-intercept-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regression Line Intercept Inclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation-coefficient-r-and-correlation-of-determination-r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation Coefficient (\(r\)) and Correlation of Determination (\(r^2\))
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correlation Coefficient (\(r\)) and Correlation of Determination (\(r^2\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pearson-correlation-coefficient-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pearson Correlation Coefficient (\(r\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coefficient-of-determination-r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coefficient of Determination (\(r^2\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-formulas-for-r-and-r2-in-the-context-of-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate Formulas for \(r\) and \(r^2\) in the Context of Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternate Formulas for \(r\) and \(r^2\) in the Context of Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-standard-deviations-and-slope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Standard Deviations and Slope:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-the-sum-of-squares" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the Sum of Squares:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-the-z-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the \(z\)-scores:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown-using-individual-sum-terms_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown Using Individual Sum Terms:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-exam-2020-asignment-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Exam 2020, Asignment 7:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="calculating-metrics-in-simple-linear-regression">Calculating Metrics in Simple Linear Regression<a class="headerlink" href="#calculating-metrics-in-simple-linear-regression" title="Permanent link">&para;</a></h1>
+<h2 id="the-slope-and-intercept">The Slope (and intercept)<a class="headerlink" href="#the-slope-and-intercept" title="Permanent link">&para;</a></h2>
+<p>In simple linear regression, the slope parameter (often denoted as <span class="arithmatex">\(\beta_1\)</span>) represents the relationship between the independent variable (X) and the dependent variable (Y). The slope indicates how much the dependent variable is expected to increase (or decrease) for a one-unit increase in the independent variable. There are several ways to compute this slope, and here are some of the key methods:</p>
+<h3 id="least-squares-estimation">Least Squares Estimation:<a class="headerlink" href="#least-squares-estimation" title="Permanent link">&para;</a></h3>
+<p>The most common method for calculating the slope in simple linear regression is the least squares estimation. The formula for the slope (<span class="arithmatex">\(\beta_1\)</span>) using this method is:</p>
+<p>$$\boxed{
+   \beta_1 = \frac{\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})}{\sum_{i=1}^n (x_i - \overline{x})^2}}
+   $$</p>
+<p>In this expression:
+- <span class="arithmatex">\(\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})\)</span> is the sum of the products of the deviations of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> from their respective means. This term captures the covariance between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, indicating how much <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> vary together from their mean values (though excluding <span class="arithmatex">\(\frac{1}{n-1}\)</span>). This term is often denoted <span class="arithmatex">\(S_{xy}\)</span>.
+- <span class="arithmatex">\(\overline{x}\)</span> and <span class="arithmatex">\(\overline{y}\)</span> are the means of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, respectively. These are calculated as <span class="arithmatex">\(\overline{x} = \frac{1}{n} \sum_{i=1}^n x_i\)</span> and <span class="arithmatex">\(\overline{y} = \frac{1}{n} \sum_{i=1}^n y_i\)</span>, where <span class="arithmatex">\(n\)</span> is the number of observations.
+- <span class="arithmatex">\(\sum_{i=1}^n (x_i - \overline{x})^2\)</span> represents the sum of the squares of the deviations of <span class="arithmatex">\(x\)</span> from its mean. This term is a measure of the total variance in <span class="arithmatex">\(x\)</span> and helps normalize the covariance in the numerator. This term is often denoted <span class="arithmatex">\(S_{xy}\)</span>.
+- <span class="arithmatex">\(n\)</span> is the number of observations, indicating the total number of data points in the dataset.</p>
+<h3 id="sum-of-products">Sum of Products<a class="headerlink" href="#sum-of-products" title="Permanent link">&para;</a></h3>
+<p>The fundamental expression for the slope is the one stated above. But we can also use the sum of products which is demonstrated here.</p>
+<p><em>Derivation of <span class="arithmatex">\((S_{xy})\)</span></em></p>
+<p>The regular form for the sum of products of deviations for <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> is:
+$$
+S_{xy} = \sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})
+$$</p>
+<p>Expanding this sum:
+$$
+S_{xy} = \sum_{i=1}^n (x_i y_i - x_i \overline{y} - y_i \overline{x} + \overline{x} \overline{y})
+$$</p>
+<p>Simplifying this by distributing the summation:
+$$
+S_{xy} = \sum_{i=1}^n x_i y_i - \sum_{i=1}^n x_i \overline{y} - \sum_{i=1}^n y_i \overline{x} + n \overline{x} \overline{y}
+$$</p>
+<p>Notice that $\sum_{i=1}^n x_i \overline{y} $ can be rewritten because <span class="arithmatex">\(\overline{y}\)</span> is a constant:
+$$
+\sum_{i=1}^n x_i \overline{y} = \overline{y} \sum_{i=1}^n x_i
+$$
+And similarly for <span class="arithmatex">\(\sum_{i=1}^n y_i \overline{x}\)</span>:
+$$
+\sum_{i=1}^n y_i \overline{x} = \overline{x} \sum_{i=1}^n y_i
+$$</p>
+<p>Since <span class="arithmatex">\(\sum_{i=1}^n x_i = n \overline{x}\)</span> and <span class="arithmatex">\(\sum_{i=1}^n y_i = n \overline{y}\)</span>, the terms simplify to:
+ $$
+S_{xy} = \sum_{i=1}^n x_i y_i - n \overline{x} \overline{y}
+$$</p>
+<p><em>Derivation of <span class="arithmatex">\(S_{xx}\)</span></em></p>
+<p>The regular form for the sum of squares of deviations for $ x $ is:
+$$
+S_{xx} = \sum_{i=1}^n (x_i - \overline{x})^2
+$$</p>
+<p>Expanding this sum:
+$$
+S_{xx} = \sum_{i=1}^n (x_i^2 - 2x_i \overline{x} + \overline{x}^2)
+$$</p>
+<p>Simplifying this by distributing the summation:
+$$
+S_{xx} = \sum_{i=1}^n x_i^2 - 2\overline{x} \sum_{i=1}^n x_i + n\overline{x}^2
+$$</p>
+<p>Since <span class="arithmatex">\(\sum_{i=1}^n x_i = n\overline{x}\)</span>:
+$$
+S_{xx} = \sum_{i=1}^n x_i^2 - 2n\overline{x}^2 + n\overline{x}^2
+$$</p>
+<p>Combining the terms results in:
+ $$
+S_{xx} = \sum_{i=1}^n x_i^2 - n\overline{x}^2
+$$</p>
+<p>These derivations provide a clear mathematical pathway from the traditional definitions of $ S_{xy} $ and $ S_{xx} $ to the forms that are easily implemented in a python script for instance, and also means we can also formulate the slope as:</p>
+<p>$$\boxed{
+\beta_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum_{i=1}^n x_i y_i - n \overline{x} \overline{y}}{\sum_{i=1}^n x_i^2 - n\overline{x}^2}}
+$$</p>
+<h3 id="breakdown-using-individual-sum-terms">Breakdown Using Individual Sum Terms<a class="headerlink" href="#breakdown-using-individual-sum-terms" title="Permanent link">&para;</a></h3>
+<p>Another way to express this is by explicitly calculating the sums:</p>
+<div class="arithmatex">\[\boxed{
+\beta_1=\frac{n \sum\left(x_i y_i\right)-\sum x_i \sum y_i}{n \sum\left(x_i^2\right)-\left(\sum x_i\right)^2}}
+\]</div>
+<p>In this expression:
+- <span class="arithmatex">\(n\)</span> is the number of observations.,
+- <span class="arithmatex">\(\sum\left(x_i y_i\right)\)</span> is the sum of the products of corresponding <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> values,
+- <span class="arithmatex">\(\sum x_i\)</span> and <span class="arithmatex">\(\sum y_i\)</span> are the sums of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> values, respectively,
+- <span class="arithmatex">\(\sum\left(x_i^2\right)\)</span> is the sum of the squares of <span class="arithmatex">\(x\)</span> values.</p>
+<h3 id="covariance-and-variance-method">Covariance and Variance Method:<a class="headerlink" href="#covariance-and-variance-method" title="Permanent link">&para;</a></h3>
+<p>This is essentially a rearrangement of the least squares formula, emphasizing the use of covariance and variance:
+   $$\boxed{
+   \beta_1 = \frac{\text{Cov}(X, Y)}{\text{Var}(X)}}
+   $$
+   where:
+- <span class="arithmatex">\(\text{Cov}(X, Y) = \frac{\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})}{n-1}\)</span> (assuming a sample covariance)
+- <span class="arithmatex">\(\text{Var}(X) = \frac{\sum_{i=1}^n (x_i - \overline{x})^2}{n-1}\)</span> (also assuming sample variance)</p>
+<h3 id="matrix-algebra-using-normal-equation">Matrix Algebra (Using Normal Equation):<a class="headerlink" href="#matrix-algebra-using-normal-equation" title="Permanent link">&para;</a></h3>
+<p>When dealing with linear regression in matrix terms, the slope can be calculated using the normal equation:
+   $$ \boxed{
+   \beta = (X^T X)^{-1} X^T Y}
+   $$
+   Here, <span class="arithmatex">\(X\)</span> is the matrix of input features (including a column of ones for the intercept if it's included in the model), and <span class="arithmatex">\(Y\)</span> is the vector of output values, and <span class="arithmatex">\(\beta\)</span> is a vector that will contain all the coefficients.</p>
+<h3 id="gradient-descent">Gradient Descent:<a class="headerlink" href="#gradient-descent" title="Permanent link">&para;</a></h3>
+<p>Though not a formula in the traditional sense, gradient descent is an algorithmic approach used to find the minimum of the cost function (typically mean squared error) in regression. The update rule in each iteration for <span class="arithmatex">\(\beta_1\)</span> would be:
+   $$\boxed{
+   \beta_1^{(new)} = \beta_1^{(old)} - \alpha \frac{\partial}{\partial \beta_1} MSE}
+   $$
+   where <span class="arithmatex">\(\alpha\)</span> is the learning rate and <span class="arithmatex">\(\frac{\partial}{\partial \beta_1} MSE\)</span> is the derivative of the mean squared error with respect to <span class="arithmatex">\(\beta_1\)</span>.</p>
+<h2 id="regression-line-intercept-inclusion">Regression Line Intercept Inclusion<a class="headerlink" href="#regression-line-intercept-inclusion" title="Permanent link">&para;</a></h2>
+<p>We will also explain how the slope relates to the intercept in the regression equation, presented here as part of the full regression formula:</p>
+<div class="arithmatex">\[
+y = \beta_0 + \beta_1 x
+\]</div>
+<p>where
+$$
+\beta_1 = \frac{\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})}{\sum_{i=1}^n (x_i - \overline{x})^2}
+$$
+(or one of the alternatives from above) and
+$$\boxed{
+\beta_0 = \overline{y} - \beta_1 \overline{x}}
+$$</p>
+<h2 id="correlation-coefficient-r-and-correlation-of-determination-r2">Correlation Coefficient (<span class="arithmatex">\(r\)</span>) and Correlation of Determination (<span class="arithmatex">\(r^2\)</span>)<a class="headerlink" href="#correlation-coefficient-r-and-correlation-of-determination-r2" title="Permanent link">&para;</a></h2>
+<p>This section will present different formulations of <span class="arithmatex">\(r\)</span> or <span class="arithmatex">\(r^2\)</span>. Depending on the formulation, one or the other is shown.</p>
+<h3 id="pearson-correlation-coefficient-r">Pearson Correlation Coefficient (<span class="arithmatex">\(r\)</span>)<a class="headerlink" href="#pearson-correlation-coefficient-r" title="Permanent link">&para;</a></h3>
+<p>The Pearson correlation coefficient (<span class="arithmatex">\(r\)</span>) measures the linear correlation between two variables, <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>. It is defined as the ratio of the covariance of the variables to the product of their standard deviations. Mathematically, it's expressed as:</p>
+<div class="arithmatex">\[\boxed{
+r = \frac{\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})}{\sqrt{\sum_{i=1}^n (x_i - \overline{x})^2 \sum_{i=1}^n (y_i - \overline{y})^2}} = \frac{S_{x y}}{\sqrt{S_{x x} \cdot S_{y y}}}}
+\]</div>
+<p>Here, <span class="arithmatex">\(\overline{x}\)</span> and <span class="arithmatex">\(\overline{y}\)</span> are the means of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, respectively. This formula essentially scales the covariance between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> by the product of their standard deviations, ensuring that <span class="arithmatex">\(r\)</span> is dimensionless and ranges between -1 and +1. Also note</p>
+<h3 id="coefficient-of-determination-r2">Coefficient of Determination (<span class="arithmatex">\(r^2\)</span>)<a class="headerlink" href="#coefficient-of-determination-r2" title="Permanent link">&para;</a></h3>
+<p>The coefficient of determination, known as <span class="arithmatex">\(r^2\)</span>, is the square of the Pearson correlation coefficient. It represents the proportion of the variance in the dependent variable that is predictable from the independent variable(s). It is calculated simply by squaring <span class="arithmatex">\(r\)</span>:</p>
+<div class="arithmatex">\[\boxed{
+r^2 = \left(\frac{\sum_{i=1}^n (x_i - \overline{x})(y_i - \overline{y})}{\sqrt{\sum_{i=1}^n (x_i - \overline{x})^2 \sum_{i=1}^n (y_i - \overline{y})^2}}\right)^2}
+\]</div>
+<p>This value ranges from 0 to 1, where 0 indicates no correlation and 1 indicates perfect correlation.</p>
+<h3 id="alternate-formulas-for-r-and-r2-in-the-context-of-regression">Alternate Formulas for <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(r^2\)</span> in the Context of Regression<a class="headerlink" href="#alternate-formulas-for-r-and-r2-in-the-context-of-regression" title="Permanent link">&para;</a></h3>
+<p>In the context of simple linear regression, where you have calculated the slope (<span class="arithmatex">\(\beta_1\)</span>) and the intercept (<span class="arithmatex">\(\beta_0\)</span>), <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(r^2\)</span> can also be calculated directly from the regression output:</p>
+<h4 id="using-standard-deviations-and-slope">Using Standard Deviations and Slope:<a class="headerlink" href="#using-standard-deviations-and-slope" title="Permanent link">&para;</a></h4>
+<p>$$\boxed{
+  r = \beta_1 \frac{s_x}{s_y}}
+  $$
+  where <span class="arithmatex">\(s_x\)</span> and <span class="arithmatex">\(s_y\)</span> are the standard deviations of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, respectively, and <span class="arithmatex">\(\beta_1\)</span> is the slope of the regression line. This formula derives from the relationship that the slope of the regression line in standardized units is the correlation coefficient. Note, <span class="arithmatex">\(s_x = \sqrt{S_{xx}}\)</span> and Note, <span class="arithmatex">\(s_y = \sqrt{S_{yy}}\)</span>, in both cases omitting <span class="arithmatex">\(\frac{1}{n-1}\)</span>.</p>
+<h4 id="from-the-sum-of-squares">From the Sum of Squares:<a class="headerlink" href="#from-the-sum-of-squares" title="Permanent link">&para;</a></h4>
+<p>$$\boxed{
+  r^2 = \frac{SSR}{SST} = 1-\frac{SSE}{SST}}
+  $$</p>
+<p>In regression analysis, the total sum of squares (SST), the regression sum of squares (SSR), and the sum of squares of errors (SSE) are important quantities for measuring the variability in the data and the performance of the regression model.</p>
+<ul>
+<li>
+<p><strong>Total Sum of Squares (SST)</strong></p>
+<p>The Total Sum of Squares measures the total variability of the dataset relative to the mean. It is calculated as:
+$$
+\text{SST} = \sum_{i=1}^n (y_i - \overline{y})^2
+$$
+where <span class="arithmatex">\(y_i\)</span> are the observed values and <span class="arithmatex">\(\overline{y}\)</span> is the mean of the <span class="arithmatex">\(y\)</span> values.</p>
+</li>
+<li>
+<p><strong>Regression Sum of Squares (SSR)</strong></p>
+<p>The Regression Sum of Squares measures how much of the total variability in the dependent variable can be explained by the independent variable(s) in the model. It is calculated as:
+$$
+\text{SSR} = \sum_{i=1}^n (\hat{y}_i - \overline{y})^2
+$$
+where <span class="arithmatex">\(\hat{y}_i\)</span> are the predicted values from the regression model.</p>
+</li>
+<li>
+<p><strong>Sum of Squares of Errors (SSE)</strong></p>
+<p>The Sum of Squares of Errors measures the variability of the model errors (residuals). It is calculated as:
+$$
+\text{SSE} = \sum_{i=1}^n (y_i - \hat{y}_i)^2
+$$
+where <span class="arithmatex">\(y_i\)</span> are the observed values and <span class="arithmatex">\(\hat{y}_i\)</span> are the predicted values from the regression model.</p>
+</li>
+</ul>
+<p>These three components are related by the identity:
+   $$
+   \text{SST} = \text{SSR} + \text{SSE}
+   $$
+   This identity shows that the total variability in the dataset (<span class="arithmatex">\(\text{SST}\)</span>) can be decomposed into the variability explained by the regression model (<span class="arithmatex">\(\text{SSR}\)</span>) and the variability that is not explained by the model (<span class="arithmatex">\(\text{SSE}\)</span>).</p>
+<p>Each of these formulas provides insight into different aspects of the regression analysis, such as the effectiveness of the model in explaining the variation in the data and the amount of error in the predictions.</p>
+<h4 id="from-the-z-scores">From the <span class="arithmatex">\(z\)</span>-scores:<a class="headerlink" href="#from-the-z-scores" title="Permanent link">&para;</a></h4>
+<p>The formula for calculating the Pearson correlation coefficient using standardized scores is:</p>
+<div class="arithmatex">\[\boxed{
+r = \frac{\sum (z_x \cdot z_y)}{n-1}}
+\]</div>
+<p>where:
+- <span class="arithmatex">\(z_x = \frac{x - \overline{x}}{s_x}\)</span> and <span class="arithmatex">\(z_y = \frac{y - \overline{y}}{s_y}\)</span> are the standardized scores of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>. 
+- <span class="arithmatex">\(\overline{x}\)</span> and <span class="arithmatex">\(\overline{y}\)</span> are the means of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, respectively.
+- <span class="arithmatex">\(s_x\)</span> and <span class="arithmatex">\(s_y\)</span> are the standard deviations of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, respectively.
+- The numerator, <span class="arithmatex">\(\sum (z_x \cdot z_y)\)</span>, represents the sum of the products of these standardized scores, effectively capturing the covariance of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>.
+- The denominator, <span class="arithmatex">\(n-1\)</span>, corrects for the bias in variance estimation from a sample, making the calculation an unbiased estimator of the population correlation coefficient.</p>
+<p>This approach normalizes both variables to have zero mean and unit variance, simplifying the interpretation of the correlation coefficient as it directly measures the degree of linear relationship between the standardized versions of the original variables.</p>
+<h4 id="breakdown-using-individual-sum-terms_1">Breakdown Using Individual Sum Terms:<a class="headerlink" href="#breakdown-using-individual-sum-terms_1" title="Permanent link">&para;</a></h4>
+<p>$$\boxed{
+  r = \frac{n \cdot \sum (x_i y_i) - \sum x_i \cdot \sum y_i}{\sqrt{n \cdot \sum x_i^2 - (\sum x_i)^2} \cdot \sqrt{n \cdot y_i^2 - (\sum y_i)^2}}}
+  $$</p>
+<p>where:
+  - $ \sum (x_i y_i) $ is the sum of the products of corresponding $ x $ and $ y $ values.
+  - $ \sum x_i $ and $ \sum y_i $ are the sums of all $ x $ values and $ y $ values, respectively.
+  - $ \sum x_i^2 $ and $ \sum y_i^2 $ are the sums of the squares of all $ x $ and $ y $ values, respectively.
+  - The term $ n $ is the number of data points.</p>
+<p>The denominator involves the square roots of the products of $ n $ and the sum of squares of $ x $ and $ y $, minus the square of the sum of $ x $ and $ y $ values, all scaled by $ n $. This structure follows the formula for the standard deviation, scaled to the sample size to adjust for bias, fitting the denominator of the correlation coefficient formula. This formula effectively measures the strength and direction of a linear relationship between two variables.</p>
+<h2 id="example-exam-2020-asignment-7">Example: Exam 2020, Asignment 7:<a class="headerlink" href="#example-exam-2020-asignment-7" title="Permanent link">&para;</a></h2>
+<p><strong>Problem:</strong></p>
+<p>A professor in the School of Engineering in a university polled a dozen colleagues about the number of professional meetings they attended in the past five years <span class="arithmatex">\((x)\)</span> and the number of papers they submitted to refereed journals <span class="arithmatex">\((y)\)</span> during the same period. The summary data are given as follows:
+$$
+\begin{aligned}
+n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \
+\sum_{i=1}^n x_i^2 &amp; =232, \quad \sum_{i=1}^n x_i y_i=318
+\end{aligned}
+$$</p>
+<p>Fit a simple linear regression model between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> by finding out the estimates of intercept and slope. Hint: Use the Least Squares Estimates formula from the book.</p>
+<p><strong>Solution:</strong></p>
+<p>Given the values, we can use one of the variations provided earlier:</p>
+<div class="arithmatex">\[
+\beta_1 = \frac{\sum_{i=1}^n x_i y_i - n \overline{x} \overline{y}}{\sum_{i=1}^n x_i^2 - n \overline{x}^2}
+\]</div>
+<p>Let's plug in the values:</p>
+<ul>
+<li><span class="arithmatex">\(n = 12\)</span></li>
+<li><span class="arithmatex">\(\overline{x} = 4\)</span></li>
+<li><span class="arithmatex">\(\overline{y} = 12\)</span></li>
+<li><span class="arithmatex">\(\sum_{i=1}^n x_i^2 = 232\)</span></li>
+<li><span class="arithmatex">\(\sum_{i=1}^n x_i y_i = 318\)</span></li>
+</ul>
+<p>Calculating <span class="arithmatex">\(\beta_1\)</span>:</p>
+<div class="arithmatex">\[
+\beta_1 = \frac{318 - 12 \times 4 \times 12}{232 - 12 \times 4^2}
+\]</div>
+<p>In the solution, the following formula, also presented above, is used:</p>
+<div class="arithmatex">\[
+\beta_1=\frac{n \sum\left(x_i y_i\right)-\sum x_i \sum y_i}{n \sum\left(x_i^2\right)-\left(\sum x_i\right)^2}
+\]</div>
+<p>Plugging these values into the formula:
+$$
+\beta_1=\frac{(12)(318)-[(12)(4)][(12)(12)]}{(12)(232)-[(12)(4)]^2}
+$$</p>
+<p>Once we have <span class="arithmatex">\(\beta_1\)</span>, we can calculate the intercept <span class="arithmatex">\(\beta_0\)</span> using the formula:</p>
+<div class="arithmatex">\[
+\beta_0 = \overline{y} - \beta_1 \overline{x}
+\]</div>
+<p>We'll compute <span class="arithmatex">\(\beta_1\)</span> first and then use it to find <span class="arithmatex">\(\beta_0\)</span>.</p>
+<p>Using the provided data, the estimated parameters for your linear regression model are:</p>
+<ul>
+<li>Slope (<span class="arithmatex">\(\beta_1\)</span>): <span class="arithmatex">\(-6.45\)</span></li>
+<li>Intercept (<span class="arithmatex">\(\beta_0\)</span>): <span class="arithmatex">\(37.8\)</span></li>
+</ul>
+<p>Thus, the fitted linear regression model can be expressed as:
+$$
+y = 37.8 - 6.45x
+$$
+This equation predicts the value of <span class="arithmatex">\(y\)</span> based on the value of <span class="arithmatex">\(x\)</span>, with the model suggesting that <span class="arithmatex">\(y\)</span> decreases by approximately 6.45 units for every one unit increase in <span class="arithmatex">\(x\)</span>.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Richard Brooks
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:rib@via.dk" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/RBrooksDK/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/rbrooks-dk/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.prune", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
