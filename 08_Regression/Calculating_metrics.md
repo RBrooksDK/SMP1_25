@@ -255,9 +255,10 @@ $$
 
 Fit a simple linear regression model between $x$ and $y$ by finding out the estimates of intercept and slope. Hint: Use the Least Squares Estimates formula from the book.
 
-**Solution:**
+<details>
+  <summary>Click here to see the solution</summary>
 
-Given the values, we can use one of the variations provided earlier:
+<p>Given the values, we can use one of the variations provided earlier:
 
 $$
 \beta_1 = \frac{\sum_{i=1}^n x_i y_i - n \overline{x} \overline{y}}{\sum_{i=1}^n x_i^2 - n \overline{x}^2}
@@ -306,6 +307,6 @@ Thus, the fitted linear regression model can be expressed as:
 $$
 y = 37.8 - 6.45x
 $$
-This equation predicts the value of $y$ based on the value of $x$, with the model suggesting that $y$ decreases by approximately 6.45 units for every one unit increase in $x$.
+This equation predicts the value of $y$ based on the value of $x$, with the model suggesting that $y$ decreases by approximately 6.45 units for every one unit increase in $x$.</p>
 
-
+</details>
