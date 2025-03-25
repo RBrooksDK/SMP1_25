@@ -3,9 +3,9 @@
 ## Material:
 ASPE: 9.1-9.3 + 9.5 + 9.8 + 10.1-10.4 + 10.6
 
-[Notes recap](https://drive.google.com/file/d/1KR85vvK9Oo_QN9WKiHic2bY3ueC3JShL/view?usp=sharing)
+[Notes recap](https://drive.google.com/file/d/1Jmf3LQRnhkY4ponmFjlTWRafviG3Wssh/view?usp=sharing)
 
-[Session notes](https://drive.google.com/file/d/1fg4pstQXTtnNDVbvgWSEwN-CucDAx7Nt/view?usp=sharing)
+[Session notes](https://drive.google.com/file/d/1sIXa8DCVkjguV8dHwXPTtPZiQKLZsc-o/view?usp=sharing)
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Em4S0kBQDWZPiOBLpJjM3MEBNWQx40JCmPXPRtj0EoO7_g?e=VFim27)
 

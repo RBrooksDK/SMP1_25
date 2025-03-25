@@ -244,6 +244,6 @@ $$
 ??? answer
     1. $\approx 0.9473$ and $\approx 0.0527$
     2. $\approx 1.667$ and $\approx 2.4$
-    3. $f_Z(y)=\left\{\begin{array}{lc}\frac{3}{64} \cdot z^{-1} \ln z & 1<z<e^4 \\ 0 & \text { else }\end{array}\right.$
+    3. $f_Z(y)=\left\{\begin{array}{lc}\frac{3}{64} \cdot z^{-1} (\ln z)^2 & 1<z<e^4 \\ 0 & \text { else }\end{array}\right.$
     4. $-3/2$
     5. $\approx 0.08$
