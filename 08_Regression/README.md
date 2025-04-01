@@ -5,9 +5,9 @@
 
 ASPE: 11 (not 11.9)
 
-[Recap notes](https://drive.google.com/file/d/1A7HXGOLlSchKT6Xd7HYJUXkUqDv1hk9c/view?usp=sharing)
+[Recap notes](https://drive.google.com/file/d/1Qsuum2ke2f8gCUyeP1wcFHkusnbBqSU6/view?usp=sharing)
 
-[Session notes](https://drive.google.com/file/d/1COasq655j7b-M4eWaY2rxyPqoKi4zsZW/view?usp=sharing)
+[Session notes](https://drive.google.com/file/d/1N_hUEd6Hwn93dVtaSWHsFqe9N47E2WRg/view?usp=sharing)
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ev05wEbMShxPn7BZdA0uAncBwWrvATthywVt7NfsbGJo6w?e=GGnrFa)
 
