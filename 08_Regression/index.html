@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../figures/fav.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
@@ -169,11 +169,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -212,6 +214,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -1177,27 +1180,27 @@
 </ol>
 <details class="answer">
 <summary>Answer</summary>
-<div class="language-text highlight"><pre><span></span><code>    df = pd.read_excel(&quot;HydroCarbonEmissions.xlsx&quot;)
-    df.head()
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;HydroCarbonEmissions.xlsx&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</span></code></pre></div>
 <ol>
 <li>
-<div class="language-text highlight"><pre><span></span><code>display(Latex(&quot;For 2010 model:&quot;))
-display(Latex(&quot;$$Q_1 = {}$$&quot;.format(np.percentile(df[&#39;2010s models&#39;], 25))))
-display(Latex(&quot;$$Q_2 = {}$$&quot;.format(np.percentile(df[&#39;2010s models&#39;], 50))))
-display(Latex(&quot;$$Q_3 = {}$$&quot;.format(np.percentile(df[&#39;2010s models&#39;], 75))))
-display(Latex(&quot;$$\mu = {}$$&quot;.format(df[&#39;2010s models&#39;].mean())))
-display(Latex(&quot;$$\sigma = {}$$&quot;.format(round(df[&#39;2010s models&#39;].std(ddof=1), 2))))
-display(Latex(&quot;$$\sigma^2 = {}$$&quot;.format(round(df[&#39;2010s models&#39;].var(ddof=1), 2))))
-
-display(Latex(&quot;For 2020 model:&quot;))
-display(Latex(&quot;$$Q_1 = {}$$&quot;.format(np.percentile(df[&#39;2020s models&#39;], 25))))
-display(Latex(&quot;$$Q_2 = {}$$&quot;.format(np.percentile(df[&#39;2020s models&#39;], 50))))
-display(Latex(&quot;$$Q_3 = {}$$&quot;.format(np.percentile(df[&#39;2020s models&#39;], 75))))
-display(Latex(&quot;$$\mu = {}$$&quot;.format(df[&#39;2020s models&#39;].mean())))
-display(Latex(&quot;$$\sigma = {}$$&quot;.format(round(df[&#39;2020s models&#39;].std(ddof=1), 2))))
-display(Latex(&quot;$$\sigma^2 = {}$$&quot;.format(round(df[&#39;2020s models&#39;].var(ddof=1), 2))))
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;For 2010 model:&quot;</span><span class="p">))</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$Q_1 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">],</span> <span class="mi">25</span><span class="p">))))</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$Q_2 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">],</span> <span class="mi">50</span><span class="p">))))</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$Q_3 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">],</span> <span class="mi">75</span><span class="p">))))</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$\mu = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())))</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$\sigma = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">))))</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$\sigma^2 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">))))</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;For 2020 model:&quot;</span><span class="p">))</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$Q_1 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">],</span> <span class="mi">25</span><span class="p">))))</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$Q_2 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">],</span> <span class="mi">50</span><span class="p">))))</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$Q_3 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">],</span> <span class="mi">75</span><span class="p">))))</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$\mu = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())))</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$\sigma = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">))))</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s2">&quot;$$\sigma^2 = </span><span class="si">{}</span><span class="s2">$$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">))))</span>
+</span></code></pre></div>
 <p>For 2010 model: </p>
 <div class="arithmatex">\[\begin{gathered}
 Q_1=258.0 \\
@@ -1218,49 +1221,50 @@ Q_3=506.75 \\
 \end{aligned}\]</div>
 </li>
 <li>
-<div class="language-text highlight"><pre><span></span><code>n10 = len(df[&#39;2010s models&#39;])
-m10 = np.mean(df[&#39;2010s models&#39;])
-SE10 = stats.sem(df[&#39;2010s models&#39;])
-Level = 0.95
-
-CI10 = stats.t.interval(Level, n10-1, loc=m10, scale=SE10)
-
-n20 = len(df[&#39;2020s models&#39;])
-m20 = np.mean(df[&#39;2020s models&#39;])
-SE20 = stats.sem(df[&#39;2020s models&#39;])
-
-CI20 = stats.t.interval(Level, n20-1, loc=m20, scale=SE20)
-
-display(Latex(&#39;A &#39; + repr(int(Level*100)) + &#39; % confidence interval for the sample mean of the 2010 models is [&#39;+
-            repr(round(CI10[0],3)) + &#39; ; &#39; + repr(round(CI10[1],3)) + &#39;]&#39;))
-display(Latex(&#39;A &#39; + repr(int(Level*100)) + &#39; % confidence interval for the sample mean of the 2020 models is [&#39;+
-            repr(round(CI20[0],3)) + &#39; ; &#39; + repr(round(CI20[1],3)) + &#39;]&#39;))
-
-# Confidence interval calculations
-CI10 = stats.norm.interval(0.95, loc=m10, scale=SE10)
-CI20 = stats.norm.interval(0.95, loc=m20, scale=SE20)
-
-# Plotting
-plt.figure(figsize=(10, 6))
-x10 = np.linspace(m10 - 4*SE10, m10 + 4*SE10, 1000)
-z10 = np.linspace(CI10[0], CI10[1], 1000)
-y10 = stats.norm.pdf(x10, m10, SE10)
-plt.plot(x10, y10, color=&#39;blue&#39;, label=&#39;2010s models PDF&#39;)
-plt.fill_between(z10, stats.norm.pdf(z10, m10, SE10), color=&#39;blue&#39;, alpha=0.5, label=&#39;2010s CI&#39;)
-
-x20 = np.linspace(m20 - 4*SE20, m20 + 4*SE20, 1000)
-z20 = np.linspace(CI20[0], CI20[1], 1000)
-y20 = stats.norm.pdf(x20, m20, SE20)
-plt.plot(x20, y20, color=&#39;green&#39;, label=&#39;2020s models PDF&#39;)
-plt.fill_between(z20, stats.norm.pdf(z20, m20, SE20), color=&#39;green&#39;, alpha=0.5, label=&#39;2020s CI&#39;)
-
-plt.title(&#39;Probability Density Function and Confidence Intervals for 2010s and 2020s Models&#39;)
-plt.xlabel(&#39;Value&#39;)
-plt.ylabel(&#39;Probability Density&#39;)
-plt.legend()
-plt.grid(True)
-plt.show()
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">n10</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">])</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">m10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">])</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">SE10</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2010s models&#39;</span><span class="p">])</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">Level</span> <span class="o">=</span> <span class="mf">0.95</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">CI10</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="n">Level</span><span class="p">,</span> <span class="n">n10</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">m10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">SE10</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">n20</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">])</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">m20</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">])</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">SE20</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">sem</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;2020s models&#39;</span><span class="p">])</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">CI20</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="n">Level</span><span class="p">,</span> <span class="n">n20</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">m20</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">SE20</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s1">&#39;A &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">Level</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; </span><span class="si">% c</span><span class="s1">onfidence interval for the sample mean of the 2010 models is [&#39;</span><span class="o">+</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            <span class="nb">repr</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">CI10</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">3</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; ; &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">CI10</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">3</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">))</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s1">&#39;A &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">Level</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; </span><span class="si">% c</span><span class="s1">onfidence interval for the sample mean of the 2020 models is [&#39;</span><span class="o">+</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>            <span class="nb">repr</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">CI20</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">3</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; ; &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">CI20</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">3</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span><span class="p">))</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c1"># Confidence interval calculations</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">CI10</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">m10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">SE10</span><span class="p">)</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">CI20</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">m20</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">SE20</span><span class="p">)</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="c1"># Plotting</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="n">x10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">m10</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">SE10</span><span class="p">,</span> <span class="n">m10</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">SE10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="n">z10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">CI10</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">CI10</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="n">y10</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x10</span><span class="p">,</span> <span class="n">m10</span><span class="p">,</span> <span class="n">SE10</span><span class="p">)</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x10</span><span class="p">,</span> <span class="n">y10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2010s models PDF&#39;</span><span class="p">)</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">z10</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">z10</span><span class="p">,</span> <span class="n">m10</span><span class="p">,</span> <span class="n">SE10</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2010s CI&#39;</span><span class="p">)</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="n">x20</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">m20</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">SE20</span><span class="p">,</span> <span class="n">m20</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">SE20</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="n">z20</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">CI20</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">CI20</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="n">y20</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x20</span><span class="p">,</span> <span class="n">m20</span><span class="p">,</span> <span class="n">SE20</span><span class="p">)</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x20</span><span class="p">,</span> <span class="n">y20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2020s models PDF&#39;</span><span class="p">)</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">z20</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">z20</span><span class="p">,</span> <span class="n">m20</span><span class="p">,</span> <span class="n">SE20</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2020s CI&#39;</span><span class="p">)</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Probability Density Function and Confidence Intervals for 2010s and 2020s Models&#39;</span><span class="p">)</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability Density&#39;</span><span class="p">)</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
 <p>A 95 % confidence interval for the sample mean of the 2020 models is [164.604 ; 230.276]</p>
 <p><img src="src/ex1_2.png" alt="Confidence Intervals for 2010s and 2020s Models" width="600"/></p>
 </li>
@@ -1279,6 +1283,188 @@ plt.show()
 <li>Create a contingency table, placing Gender on the vertical axis and Income Group on the horizontal axis, and test whether gender is independent of income.</li>
 <li>Create a contingency table, placing Education Level on the vertical axis and Income Group on the horizontal axis, and test whether Education Level is independent of Income Group.</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p>Contingency Table </p>
+<table>
+<thead>
+<tr>
+<th>Income Group</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Female</td>
+<td>1044</td>
+<td>727</td>
+<td>720</td>
+</tr>
+<tr>
+<td>Male</td>
+<td>1577</td>
+<td>922</td>
+<td>1060</td>
+</tr>
+</tbody>
+</table>
+<p>Critical Value: 5.9915<br />
+Chi-squared Statistic: 8.1127, Degrees of Freedom: 2<br />
+Expected Frequencies:</p>
+<table>
+<thead>
+<tr>
+<th>Gender</th>
+<th>Education Level 1</th>
+<th>Education Level 2</th>
+<th>Education Level 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Female</td>
+<td>1079.16</td>
+<td>678.95</td>
+<td>732.89</td>
+</tr>
+<tr>
+<td>Male</td>
+<td>1541.84</td>
+<td>970.05</td>
+<td>1047.11</td>
+</tr>
+</tbody>
+</table>
+<p>Test Conclusion: Reject <span class="arithmatex">\(H_0\)</span> since p-value <span class="arithmatex">\(=0.0173&lt;0.05\)</span></p>
+</li>
+<li>
+<p>Contingency Table </p>
+<table>
+<thead>
+<tr>
+<th>Gender</th>
+<th>Income Group 1</th>
+<th>Income Group 2</th>
+<th>Income Group 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Female</td>
+<td>957</td>
+<td>1202</td>
+<td>332</td>
+</tr>
+<tr>
+<td>Male</td>
+<td>679</td>
+<td>1651</td>
+<td>1229</td>
+</tr>
+</tbody>
+</table>
+<p>Critical Value: 5.9915<br />
+Chi-squared Statistic: 459.1215, Degrees of Freedom: 2<br />
+Expected Frequencies:</p>
+<table>
+<thead>
+<tr>
+<th>Gender</th>
+<th>Income Group 1</th>
+<th>Income Group 2</th>
+<th>Income Group 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Female</td>
+<td>673.60</td>
+<td>1174.68</td>
+<td>642.72</td>
+</tr>
+<tr>
+<td>Male</td>
+<td>962.40</td>
+<td>1678.32</td>
+<td>918.28</td>
+</tr>
+</tbody>
+</table>
+<p>Test Conclusion: Reject <span class="arithmatex">\(H_0\)</span> since p-value <span class="arithmatex">\(=0.0000&lt;0.05\)</span></p>
+</li>
+<li>
+<p>Contingency Table</p>
+<table>
+<thead>
+<tr>
+<th>Income Group</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Education Level 1</td>
+<td>1025</td>
+<td>1279</td>
+<td>317</td>
+</tr>
+<tr>
+<td>Education Level 2</td>
+<td>437</td>
+<td>861</td>
+<td>351</td>
+</tr>
+<tr>
+<td>Education Level 3</td>
+<td>174</td>
+<td>713</td>
+<td>893</td>
+</tr>
+</tbody>
+</table>
+<p>Critical Value: 9.4877<br />
+Chi-squared Statistic: 980.4959, Degrees of Freedom: 4  </p>
+<p>Expected Frequencies:</p>
+<table>
+<thead>
+<tr>
+<th>Income Group</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Education Level 1</td>
+<td>708.75</td>
+<td>1235.99</td>
+<td>676.26</td>
+</tr>
+<tr>
+<td>Education Level 2</td>
+<td>445.91</td>
+<td>777.62</td>
+<td>425.47</td>
+</tr>
+<tr>
+<td>Education Level 3</td>
+<td>481.34</td>
+<td>839.40</td>
+<td>459.27</td>
+</tr>
+</tbody>
+</table>
+<p>Test Conclusion: Reject <span class="arithmatex">\(H_0\)</span> since p-value <span class="arithmatex">\(=0.0000&lt;0.05\)</span></p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-3-20206">Exercise 3 (2020.6)<a class="headerlink" href="#exercise-3-20206" title="Permanent link">&para;</a></h4>
 <p>State the null and alternative hypotheses to be used in testing the following claims and determine generally where the rejection region is located (i.e. is it a right-, left- or two-tailed test):</p>
 <ol>
@@ -1288,6 +1474,61 @@ plt.show()
 <li>The proportion of voters favoring the incumbent in the upcoming American election is 0.38 .</li>
 <li>The average cabbage at the grocery store weighs at least 240 grams (Source: our colleague Jakob Knop Rasmussen).</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p>The parameter of interest is the mean snowfall in Bygholm for February.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; H_0: \mu=21.8 \mathrm{~cm} \\
+&amp; H_1: \mu \neq 21.8 \mathrm{~cm}
+\end{aligned}
+\]</div>
+<p>Two-tailed test.</p>
+</li>
+<li>
+<p>The parameter of interest is the proportion of competent teachers at VIA.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; H_0: p \leq 0.2 \\
+&amp; H_1: p&gt;0.2
+\end{aligned}
+\]</div>
+<p>Right-tailed test.</p>
+</li>
+<li>
+<p>The parameter of interest is the average school proximity to homes of children.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; H_0: \mu \leq 2.62 \mathrm{~km} \\
+&amp; H_1: \mu&gt;2.62 \mathrm{~km}
+\end{aligned}
+\]</div>
+<p>Right-tailed test.</p>
+</li>
+<li>
+<p>The parameter of interest is the proportion of voters favoring the incumbent in the upcoming American election.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; H_0: p=0.38 \\
+&amp; H_1: p \neq 0.38
+\end{aligned}
+\]</div>
+<p>Two-tailed test.</p>
+</li>
+<li>
+<p>The parameter of interest is the average weight of cabbages at the grocery.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; H_0: \mu \geq 240 g \\
+&amp; H_1: \mu&lt;240 g
+\end{aligned}
+\]</div>
+<p>Left-tailed test.</p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-4-20207">Exercise 4 (2020.7)<a class="headerlink" href="#exercise-4-20207" title="Permanent link">&para;</a></h4>
 <p>A professor in the School of Engineering in a university polled a dozen colleagues about the number of professional meetings they attended in the past five years <span class="arithmatex">\((x)\)</span> and the number of papers they submitted to refereed journals <span class="arithmatex">\((y)\)</span> during the same period. The summary data are given as follows:</p>
 <div class="arithmatex">\[
@@ -1297,6 +1538,16 @@ n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \\
 \end{aligned}
 \]</div>
 <p>Fit a simple linear regression model between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> by finding out the estimates of intercept and slope. Hint: Use the Least Squares Estimates formula from the book.</p>
+<details class="answer">
+<summary>Answer</summary>
+<div class="arithmatex">\[\begin{aligned}
+&amp;\text { From the data summary we get }\\
+&amp;\begin{aligned}
+&amp; \hat{B}_1=\frac{(12)(318)-[(4)(12)][(12)(12)]}{(12)(232)-[(4)(12)]^2}=-6.45 \\
+&amp; \hat{B}_0=12-(-6.45)(4)=37.8
+\end{aligned}
+\end{aligned}\]</div>
+</details>
 <h4 id="exercise-5-reexam-20184">Exercise 5 (Reexam 2018.4)<a class="headerlink" href="#exercise-5-reexam-20184" title="Permanent link">&para;</a></h4>
 <p>Two producers of batteries measure the longevity of 30 batteries of the same type, which were randomly chosen from a larger batch of such batteries. The lifetime (in hundreds of hours) is displayed "Batteries.xlsx".</p>
 <ol>
@@ -1308,15 +1559,134 @@ n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \\
 <li>Is there significant evidence to support the claim that the mean lifetime of the batteries from the two producers differ from one another?</li>
 <li>Setup a test to test whether the standard deviations of the two batteries differ significantly.</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Producer 1</th>
+<th style="text-align: right;">Producer 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">2.1162</td>
+<td style="text-align: right;">1.1259</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">2.5135</td>
+<td style="text-align: right;">3.1725</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">1.8137</td>
+<td style="text-align: right;">2.4492</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">0.8075</td>
+<td style="text-align: right;">3.7766</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">1.5554</td>
+<td style="text-align: right;">4.4673</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Producer 1:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+q 1 &amp; =1.1888 \\
+q 2 &amp; =1.9196 \\
+q 3 &amp; =2.4074 \\
+q 4 &amp; =3.637 \\
+&amp; \text { average }=1.9029 \\
+&amp; \text { std }=0.9109 \\
+&amp; \text { std }=0.8298
+\end{aligned}
+\]</div>
+<p>Producer 2:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; q 1=2.0375 \\
+&amp; q 2=2.5158 \\
+&amp; q 3=3.0069 \\
+&amp; q 4=4.4673 \\
+&amp; \text { average }=2.4776 \\
+&amp; \text { std }=0.9124 \\
+&amp; \text { std }=0.8325
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>95% Confidence Interval mean Producer 1: [1.56, 2.24]</p>
+</li>
+<li>
+<p>Producer 1: </p>
+<p>Skewness = 0.1134 </p>
+<p>Kurtosis = -0.4326        </p>
+<p>Producer 2:</p>
+<p>Skewness = -0.1821</p>
+<p>Kurtosis = -0.19</p>
+</li>
+<li>
+<p>95% Confidence Interval for the Difference in Means: [-1.05, -0.10]</p>
+</li>
+<li>
+<p>Reject since  0.0177  &lt;  0.05</p>
+</li>
+<li>
+<p>Fail to reject the null hypothesis: the standard deviations are not different</p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-6-reexam-20185">Exercise 6 (Reexam 2018.5)<a class="headerlink" href="#exercise-6-reexam-20185" title="Permanent link">&para;</a></h4>
-<p>Data collected in 1960 from the National Cancer Institute provides the per capita numbers of cigarettes sold along with death rates for various forms of cancer (see "Smoking and Cancer.xlsx").
-1. Build regression models with cigarettes sold as the independent variable and each of the four cancer types as the dependent variable. Accompany each model with a scatterplot and a trend line as well as confidence intervals for the regression parameters.
-2. For each model, inspect the residuals to confirm that the assumptions about normality and non-patterns are met.
-3. Which of the four cancer types exhibit the best correlation with cigarettes sold? Assess using the correlation coefficient.
-4. In which data pairs is cigarettes sold a good predictor for the type of cancer? Assess using the correlation of determination and interpret the meaning of this number.
-5. For the model that has the best correlation, find the predicted value of deaths per 100 k for 40 and 50 cigarettes sold per capita. Feel free to include <span class="arithmatex">\(95 \%\)</span> prediction intervals to your predictions.</p>
+<p>Data collected in 1960 from the National Cancer Institute provides the per capita numbers of cigarettes sold along with death rates for various forms of cancer (see <a href="SmokingandCancer.xlsx">Smoking and Cancer.xlsx</a>).</p>
+<ol>
+<li>Build regression models with cigarettes sold as the independent variable and each of the four cancer types as the dependent variable. Accompany each model with a scatterplot and a trend line as well as confidence intervals for the regression parameters.</li>
+<li>For each model, inspect the residuals to confirm that the assumptions about normality and non-patterns are met.</li>
+<li>Which of the four cancer types exhibit the best correlation with cigarettes sold? Assess using the correlation coefficient.</li>
+<li>In which data pairs is cigarettes sold a good predictor for the type of cancer? Assess using the correlation of determination and interpret the meaning of this number.</li>
+<li>For the model that has the best correlation, find the predicted value of deaths per 100 k for 40 and 50 cigarettes sold per capita. Feel free to include <span class="arithmatex">\(95 \%\)</span> prediction intervals to your predictions.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p><img src="src/ex6_1.png" alt="Regression Models" width="80%"/>
+<img src="src/ex6_2.png" alt="Regression Models" width="80%"/><br />
+<img src="src/ex6_3.png" alt="Regression Models" width="80%"/>
+<img src="src/ex6_4.png" alt="Regression Models" width="80%"/>  </p>
+</li>
+<li>
+<p><img src="src/ex6_5.png" alt="Regression Models" width="80%"/>
+<img src="src/ex6_6.png" alt="Regression Models" width="80%"/><br />
+<img src="src/ex6_7.png" alt="Regression Models" width="80%"/>
+<img src="src/ex6_8.png" alt="Regression Models" width="80%"/>  </p>
+</li>
+<li>
+<p>Correlation coefficient for bladder cancer model: 0.703621859461442</p>
+</li>
+<li>
+<p>Correlation coefficient for bladder cancer model: 0.703621859461442</p>
+<p>R-squared for bladder cancer model: 0.4950837211119772</p>
+</li>
+<li>
+<p>Bladder cancer rate for cigarette sales of 40: 5.96</p>
+<p>Bladder cancer rate for cigarette sales of 50: 7.18</p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-7-reexam-20186">Exercise 7 (Reexam 2018.6)<a class="headerlink" href="#exercise-7-reexam-20186" title="Permanent link">&para;</a></h4>
-<p>The dataset for this assignment is the infamous Titanic data set (please see "Titanic.xlsx"). The objective is to determine whether the survival rates differ between selected variables.</p>
+<p>The dataset for this assignment is the infamous Titanic data set (please see <a href="Titanic.xlsx">Titanic.xlsx</a>). The objective is to determine whether the survival rates differ between selected variables.</p>
 <p>Variable notes:</p>
 <ul>
 <li>pclass: A proxy for socio-economic status</li>
@@ -1344,6 +1714,97 @@ n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \\
 <li>Create a contingency table, placing survived on the vertical axis and alone on the horizontal axis.</li>
 <li>Test whether survival rate is independent of whether a person travelled alone or not.</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">pclass <br> survived</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">158</td>
+<td style="text-align: right;">528</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">181</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Reject the null hypothesis: 'pclass' and 'survived' are not independent</p>
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">survived</th>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sex</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">339</td>
+</tr>
+<tr>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">682</td>
+<td style="text-align: right;">161</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Reject the null hypothesis: 'sex' and 'survived' are not independent</p>
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">survived <br> alone</th>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\theta\)</span></td>
+<td style="text-align: right;">258</td>
+<td style="text-align: right;">261</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">551</td>
+<td style="text-align: right;">239</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Reject the null hypothesis: 'alone' and 'survived' are not independent</p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-8-20186">Exercise 8 (2018.6)<a class="headerlink" href="#exercise-8-20186" title="Permanent link">&para;</a></h4>
 <p>The data in <a href="Salary.xlsx">Salary.xlsx</a> show the (monthly) salary along with years of experience of 31 software developers.</p>
 <ol>
@@ -1351,6 +1812,187 @@ n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \\
 <li>According to the model, what salary can a newly graduated software developer with no experience expect?</li>
 <li>Assuming the developer starts his/her career at 27 and retires when he/she is 67 , what will be the salary of the developer when he/she retires? Does this sound plausible?</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">OLS Regression Results</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Dep. Variable:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Salary</td>
+<td style="text-align: center;">R-sq</td>
+<td style="text-align: center;">uared:</td>
+<td style="text-align: center;">0.936</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Model:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">OLS</td>
+<td style="text-align: center;">Adj. R-sq</td>
+<td style="text-align: center;">uared:</td>
+<td style="text-align: center;">0.934</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Method:</td>
+<td style="text-align: center;">Least</td>
+<td style="text-align: center;">Squares</td>
+<td style="text-align: center;">F-st</td>
+<td style="text-align: center;">atistic:</td>
+<td style="text-align: center;">412.4</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Date:</td>
+<td style="text-align: center;">Mon, 01 F</td>
+<td style="text-align: center;">eb 2021 Pr</td>
+<td style="text-align: center;">Prob (F-sta</td>
+<td style="text-align: center;">tistic):</td>
+<td style="text-align: center;"><span class="arithmatex">\(2.72 \mathrm{e}-18\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Time:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14:20:57 L</td>
+<td style="text-align: center;">Log-Likel</td>
+<td style="text-align: center;">ihood:</td>
+<td style="text-align: center;">-296.40</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">No. Observations:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">AIC:</td>
+<td style="text-align: center;">596.8</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Df Residuals:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">BIC:</td>
+<td style="text-align: center;">599.6</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Df Model:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Covariance Type:</td>
+<td style="text-align: center;">: nonrobust</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">coef</td>
+<td style="text-align: center;">std err</td>
+<td style="text-align: center;">t</td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathrm{P}&gt;\|\mathrm{t}\|\)</span></td>
+<td style="text-align: center;">[0.025</td>
+<td style="text-align: center;">0.975]</td>
+</tr>
+<tr>
+<td style="text-align: center;">const</td>
+<td style="text-align: center;"><span class="arithmatex">\(2.162 e+04\)</span></td>
+<td style="text-align: center;">1921.463</td>
+<td style="text-align: center;">11.254</td>
+<td style="text-align: center;">0.000</td>
+<td style="text-align: center;"><span class="arithmatex">\(1.77 \mathrm{e}+04\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.56 \mathrm{e}+04\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">YearsExperience</td>
+<td style="text-align: center;">6501.7589</td>
+<td style="text-align: center;">320.170</td>
+<td style="text-align: center;">20.307</td>
+<td style="text-align: center;">0.000</td>
+<td style="text-align: center;">5845.921</td>
+<td style="text-align: center;">7157.597</td>
+</tr>
+<tr>
+<td style="text-align: center;">Omnibus:</td>
+<td style="text-align: center;">4.321 Du</td>
+<td style="text-align: center;">bin-Watson:</td>
+<td style="text-align: center;">n: 1.751</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Prob(Omnibus):</td>
+<td style="text-align: center;">0.115 Jarq</td>
+<td style="text-align: center;">ue-Bera (JB):</td>
+<td style="text-align: center;">): 2.044</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Skew:</td>
+<td style="text-align: center;">0.330</td>
+<td style="text-align: center;">Prob(JB):</td>
+<td style="text-align: center;">): 0.360</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Kurtosis:</td>
+<td style="text-align: center;">1.905</td>
+<td style="text-align: center;">Cond. No.</td>
+<td style="text-align: center;">o. 13.2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Wrnings:</p>
+<p>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</p>
+<p><img src="src/ex8_1.png" alt="Regression Analysis" width="80%"/></p>
+<p><img src="src/ex8_2.png" alt="Regression Analysis" width="80%"/></p>
+<p><img src="src/ex8_3.png" alt="Regression Analysis" width="80%"/>        </p>
+<p>Skewness = 0.3305</p>
+<p>Kurtosis = -1.0946</p>
+<p><img src="src/ex8_4.png" alt="Regression Analysis" width="80%"/></p>
+</li>
+<li>
+<p>A newly employed developer can expect a monthly wage of kr. 21623.65</p>
+</li>
+<li>
+<p>If a software developer retires after 40 years, he or she will have a wage of kr. 281694.01</p>
+<p>(This sounds very unlikely!)</p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-9-20174">Exercise 9 (2017.4)<a class="headerlink" href="#exercise-9-20174" title="Permanent link">&para;</a></h4>
 <p>An industrial safety program was recently instituted in the computer chip industry. The average weekly loss (averaged over 1 month) in labor-hours due to accidents in 10 similar plants both before and after the program are as follows:</p>
 <div class="center-table">
@@ -1420,12 +2062,44 @@ n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \\
 <li>Determine whether the safety program has had a significant effect on reducing labor-hours due to accidents in the 10 plants.</li>
 <li>Is there evidence to support the claim that the program has had an effect at the <span class="arithmatex">\(1 \%\)</span> level of significance?</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p><img src="src/ex9_1.png" alt="Regression Analysis" width="80%"/></p>
+<p>Skewness = 0.1328</p>
+<p>Kurtosis = -0.7163</p>
+<p><img src="src/ex9_2.png" alt="Regression Analysis" width="80%"/>
+<img src="src/ex9_3.png" alt="Regression Analysis" width="80%"/></p>
+<p>Reject since 0.02485 &lt; 0.05</p>
+</li>
+<li>
+<p>same p-value different alpha, so no.</p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-10-20175">Exercise 10 (2017.5)<a class="headerlink" href="#exercise-10-20175" title="Permanent link">&para;</a></h4>
 <p>A recent study among 254 computer science graduates from Aarhus University was made in order to determine how successful the former students were in their current employment. 98 of these students had taken a course in linear algebra and of these 92 were classified as "successful" in their current employment. 136 of the students who had not taken a course in linear algebra were classified as "successful" in their current employment.</p>
 <ol>
 <li>Is the evidence to support the claim that computer science graduates who had taken a linear algebra course were more successful in their current employment than those who had not taken such a course?</li>
 <li>Explain the meaning of the p-value obtained in question (a), i.e. what does this probability refer to?</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p>Reject since 0.0432 &lt; 0.05</p>
+<p>Z-Test Results for Two Proportions
+Z-Score: 1.71
+P-Value: 0.0432
+Significance Level (Alpha): 0.05
+Conclusion: Reject the null hypothesis since p-value &lt; alpha.</p>
+</li>
+<li>
+<p>see other answers elsewhere</p>
+</li>
+</ol>
+</details>
 <h4 id="exercise-11-20176">Exercise 11 (2017.6)<a class="headerlink" href="#exercise-11-20176" title="Permanent link">&para;</a></h4>
 <p>As part of their final project, two ICT students are working on a data warehouse support system. The major workload is the warehouse orders. Thus, the key business metric is identified as number of order lines. The students want to find a method to predict CPU utilization based on the number of order lines entered into the system and have collected 31 samples of CPU utilization and number of order line entries</p>
 <div class="center-table">
@@ -1599,6 +2273,183 @@ n &amp; =12, \quad \bar{x}=4, \quad \bar{y}=12 \\
 <ol>
 <li>Create a complete regression analysis of the data above. Your analysis must include a plot of the data, considerations about outliers, estimates for the regression parameters and confidence intervals for these, considerations about the assumptions of the model, as well as an assessment of the adequacy of the model.</li>
 </ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>
+<p><img src="src/ex11_1.png" alt="Regression Analysis" width="80%"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">OLS Regression Results</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Dep. Variable:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Unnan</td>
+<td style="text-align: center;">med: 1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">R-squared:</td>
+<td style="text-align: center;">0.669</td>
+</tr>
+<tr>
+<td style="text-align: center;">Model:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">OLS</td>
+<td style="text-align: center;">Adj.</td>
+<td style="text-align: center;">squared:</td>
+<td style="text-align: center;">0.658</td>
+</tr>
+<tr>
+<td style="text-align: center;">Method:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Least Sq</td>
+<td style="text-align: center;">quares</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">F-statistic:</td>
+<td style="text-align: center;">58.63</td>
+</tr>
+<tr>
+<td style="text-align: center;">Date:</td>
+<td style="text-align: center;">e: Tue, 27 Nov 2018</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Prob (F-statistic):</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1.92e-08</td>
+</tr>
+<tr>
+<td style="text-align: center;">Time:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">14:45:20</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Log-Likelihood:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-107.14</td>
+</tr>
+<tr>
+<td style="text-align: center;">No. Observations:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">AIC:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">218.3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Df Residuals:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">BIC:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">221.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Df Model:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Covariance Type</td>
+<td style="text-align: center;">e: nonrobust</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0.975]</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">coef</td>
+<td style="text-align: center;">std err</td>
+<td style="text-align: center;">t</td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathrm{P}&gt;\|\mathrm{t}\|\)</span></td>
+<td style="text-align: center;">[0.025</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">const 4.</td>
+<td style="text-align: center;">6291</td>
+<td style="text-align: center;">2.652</td>
+<td style="text-align: center;">1.745</td>
+<td style="text-align: center;">0.092</td>
+<td style="text-align: center;">-0.796</td>
+<td style="text-align: center;">10.054</td>
+</tr>
+<tr>
+<td style="text-align: center;">Unnamed: 20.</td>
+<td style="text-align: center;">. 0019</td>
+<td style="text-align: center;">0.000</td>
+<td style="text-align: center;">7.657</td>
+<td style="text-align: center;">0.000</td>
+<td style="text-align: center;">0.001</td>
+<td style="text-align: center;">0.002</td>
+</tr>
+<tr>
+<td style="text-align: center;">Omnibus:</td>
+<td style="text-align: center;">3.065</td>
+<td style="text-align: center;">Durbin-Watson:</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">1.919</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Prob(Omnibus):</td>
+<td style="text-align: center;">0.216</td>
+<td style="text-align: center;">Jarque-Bera (JB):</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.010</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Skew:</td>
+<td style="text-align: center;">0.000</td>
+<td style="text-align: center;">Prob(JB):</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.366\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Kurtosis:</td>
+<td style="text-align: center;">4.248</td>
+<td style="text-align: center;">Cond. No. <span class="arithmatex">\(\quad 1.95 \mathrm{e}+04\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Warnings:</p>
+<p>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</p>
+<p>[2] The condition number is large, 1.95e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.</p>
+<p><img src="src/ex11_2.png" alt="Regression Analysis" width="80%"/>
+<img src="src/ex11_3.png" alt="Regression Analysis" width="80%"/>
+<img src="src/ex11_4.png" alt="Regression Analysis" width="80%"/></p>
+<p>Skewness = 0.0004</p>
+<p>Kurtosis = 1.2476</p>
+<p><img src="src/ex11_5.png" alt="Regression Analysis" width="80%"/></p>
+</li>
+</ol>
+</details>
 
 
 
