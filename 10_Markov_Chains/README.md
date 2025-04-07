@@ -2,13 +2,14 @@
 
 **Material:**
 
-[Recap notes](https://drive.google.com/file/d/1YrRNbEuI3CzXbju8-dNLD3SJB1Nadbum/view?usp=sharing)
+[Recap notes]()
 
-[Session notes](https://drive.google.com/file/d/1wlPT8WzlZ91CqzwnlmhFfryKuElfnfoD/view?usp=sharing)
+[Session notes]()
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuqNIuAYAltDmfXlB9l-DpMBTP5g7G1XrHFCqcXim9OfNQ?e=pbUO6r)
 
-Session from 20/21: [SMP 10](https://youtu.be/18PY0ogn5yI)
+Session from 20/21:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/18PY0ogn5yI?si=vUoHRXczrEXGQDIe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Topics
 
