@@ -5,15 +5,17 @@
 
 Markov Chains Ch. 1 (the rest is not in the syllabus)
 
-Matrix Algebra (optional)
+Matrix Algebra (Optional)
 
-[Recap Regression](https://drive.google.com/file/d/1KyTzpyse9vU54rra9zfOT2cW2dl8CrP2/view?usp=sharing)
+[Recap Regression]()
 
-[Session notes](https://drive.google.com/file/d/1QR7YMkkWDB_gz7NnvOF_ddyLskwSpF0m/view?usp=sharing)
+[Session notes]()
 
-[Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EpMa2OpoQTRLjtQWiM9qhugBXvJkRWuUGK7-4SuiycEDYQ?e=jXf9yT)
+[Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EpMa2OpoQTRLjtQWiM9qhugBXvJkRWuUGK7-4SuiycEDYQ?e=Fg6B41)
 
-Session from 20/21: [SMP 9](https://youtu.be/ETpNklpTK-A)
+Session from 20/21:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ETpNklpTK-A?si=sWY2BbsQzaL8GrwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Topics
 
