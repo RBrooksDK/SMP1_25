@@ -7,9 +7,9 @@ Markov Chains Ch. 1 (the rest is not in the syllabus)
 
 Matrix Algebra (Optional)
 
-[Recap Regression]()
+[Recap Regression](https://drive.google.com/file/d/1YRfnQFs64BH5TzT9nOG13GFfWXrbiXAp/view?usp=sharing)
 
-[Session notes]()
+[Session notes](https://drive.google.com/file/d/1gTaiww6T_lyrVKNU7E93SkhK3ITO3ojL/view?usp=sharing)
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EpMa2OpoQTRLjtQWiM9qhugBXvJkRWuUGK7-4SuiycEDYQ?e=Fg6B41)
 
