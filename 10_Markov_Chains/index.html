@@ -699,6 +699,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Problems to be worked on in class:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -846,6 +888,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Problems to be worked on in class:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -887,6 +971,70 @@
 </ul>
 <h2 id="problems-to-be-worked-on-in-class">Problems to be worked on in class:<a class="headerlink" href="#problems-to-be-worked-on-in-class" title="Permanent link">&para;</a></h2>
 <p>Do Problems 10 and the Wiseflow exam cases covering the final topics.</p>
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
+
+<h3 id="exercise-1">Exercise 1<a class="headerlink" href="#exercise-1" title="Permanent link">&para;</a></h3>
+<p>Consider the Markov chain with three states, <span class="arithmatex">\(S=\{1,2,3\}\)</span>, that has the following transition matrix</p>
+<div class="arithmatex">\[
+P=\left[\begin{array}{ccc}
+\frac{1}{2} &amp; \frac{1}{4} &amp; \frac{1}{4} \\
+\frac{1}{3} &amp; 0 &amp; \frac{2}{3} \\
+\frac{1}{2} &amp; \frac{1}{2} &amp; 0
+\end{array}\right]
+\]</div>
+<ol>
+<li>Draw the state transition diagram for this chain.</li>
+<li>If we know <span class="arithmatex">\(P\left(X_1=1\right)=P\left(X_1=2\right)=\frac{1}{4}\)</span>, find <span class="arithmatex">\(P\left(X_1=3, X_2=2, X_3=1\right)\)</span>.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<p><ol start="2">
+    <!-- element b -->
+    <li style> 1/12 </li>
+</ol></p>
+</details>
+<h3 id="exercise-2">Exercise 2<a class="headerlink" href="#exercise-2" title="Permanent link">&para;</a></h3>
+<p>Consider the Markov chain in the figure below. There are two recurrent classes, <span class="arithmatex">\(R_1=\{1,2\}\)</span>, and <span class="arithmatex">\(R_2=\{5,6,7\}\)</span>.</p>
+<p><img src="src/Ex2_1.png"></p>
+<ol>
+<li>Assuming <span class="arithmatex">\(X_0=3\)</span>, find the probability that the chain gets absorbed in <span class="arithmatex">\(R_1\)</span>.</li>
+<li>Find the expected time (number of steps) until the chain gets absorbed in <span class="arithmatex">\(R_1\)</span> or <span class="arithmatex">\(R_2\)</span>. More specifically, let <span class="arithmatex">\(T\)</span> be the absorption time, i.e., the first time the chain visits a state in <span class="arithmatex">\(R_1\)</span> or <span class="arithmatex">\(R_2\)</span>, so find <span class="arithmatex">\(E\left[T \mid X_0=3\right]\)</span></li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li><span class="arithmatex">\(a_3=\frac{5}{7}\)</span></li>
+<li><span class="arithmatex">\(t_3=\frac{12}{7}\)</span></li>
+</ol>
+</details>
+<h3 id="exercise-3">Exercise 3<a class="headerlink" href="#exercise-3" title="Permanent link">&para;</a></h3>
+<p>Consider the following Markov chain</p>
+<p><img src="src/Ex3_1.png"></p>
+<ol>
+<li>Is this chain irreducible?</li>
+<li>Is this chain aperiodic?</li>
+<li>Find the stationary distribution for this chain.</li>
+<li>Is the stationary distribution a limiting distribution for the chain?</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li>yes</li>
+<li>yes</li>
+<li><span class="arithmatex">\(\pi_1 \approx 0.457, \pi_2 \approx 0.257, \pi_3 \approx 0.286\)</span></li>
+<li>yes</li>
+</ol>
+</details>
+<h3 id="exercise-4">Exercise 4<a class="headerlink" href="#exercise-4" title="Permanent link">&para;</a></h3>
+<p>Consider the following Markov chain</p>
+<p><img src="src/Ex4_1.png"></p>
+<p>Assume <span class="arithmatex">\(X_0=1\)</span>, and let <span class="arithmatex">\(R\)</span> be the first time that the chain returns to state 1 . Find <span class="arithmatex">\(E\left[R \mid X_0=1\right]\)</span>.</p>
+<details class="answer">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(\frac{8}{3}\)</span></p>
+</details>
 
 
 
