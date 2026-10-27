@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../figures/fav.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -1798,32 +1798,32 @@ reject the null hypothesis and conclude that the machines are significantly diff
 <div class="language-text highlight"><pre><span></span><code>Before = [30.5, 18.5, 24.5, 32, 16, 15, 23.5, 25.5, 28, 18]
 After = [23, 21, 22, 28.5, 14.5, 15.5, 24.5, 21, 23.5, 16.5]
 
-df = pd.DataFrame({&#39;Before&#39;: Before,
-                &#39;After&#39;: After})
-df[&#39;Difference&#39;] = df[&#39;Before&#39;]- df[&#39;After&#39;]
-meandiff = np.mean(df[&#39;Difference&#39;])
+df = pd.DataFrame({'Before': Before,
+                'After': After})
+df['Difference'] = df['Before']- df['After']
+meandiff = np.mean(df['Difference'])
 </code></pre></div>
 <p>We check for normality of the differences</p>
-<div class="language-text highlight"><pre><span></span><code>stats.probplot(df[&#39;Difference&#39;], plot=plt)
-plt.ylabel(&#39;Difference in Labor-hours&#39;)
+<div class="language-text highlight"><pre><span></span><code>stats.probplot(df['Difference'], plot=plt)
+plt.ylabel('Difference in Labor-hours')
 plt.show()
-print(&#39;Skewness = &#39; + repr(round(stats.skew(df[&#39;Difference&#39;]),4)))
-print(&#39;Kurtosis = &#39; + repr(round(stats.kurtosis(df[&#39;Difference&#39;]),4)))
+print('Skewness = ' + repr(round(stats.skew(df['Difference']),4)))
+print('Kurtosis = ' + repr(round(stats.kurtosis(df['Difference']),4)))
 fig, ax = plt.subplots()
-df[&#39;Difference&#39;].plot.kde(ax=ax, legend=False, title=&#39;Distribution&#39;);
+df['Difference'].plot.kde(ax=ax, legend=False, title='Distribution');
 </code></pre></div>
 <p><img src="src/ex8_1.png" width="80%"></p>
 <p>Skewness = 0.1328</p>
 <p>Kurtosis = -0.7163</p>
 <p><img src="src/ex8_2.png" width="80%"></p>
 <p>Plotting</p>
-<div class="language-text highlight"><pre><span></span><code>n1 = len(df[&#39;Before&#39;])
-SE1 = stats.sem(df[&#39;Before&#39;])
-mean1 = np.mean(df[&#39;Before&#39;])
+<div class="language-text highlight"><pre><span></span><code>n1 = len(df['Before'])
+SE1 = stats.sem(df['Before'])
+mean1 = np.mean(df['Before'])
 
-n2 = len(df[&#39;After&#39;])
-SE2 = stats.sem(df[&#39;After&#39;])
-mean2 = np.mean(df[&#39;After&#39;])
+n2 = len(df['After'])
+SE2 = stats.sem(df['After'])
+mean2 = np.mean(df['After'])
 
 x1 = np.linspace(mean1-4*SE1, mean1+4*SE1, 1000)
 x2 = np.linspace(mean2-4*SE2, mean2+4*SE2, 1000)
@@ -1831,13 +1831,13 @@ x2 = np.linspace(mean2-4*SE2, mean2+4*SE2, 1000)
 y1 = stats.t.pdf(x1, n1-1, mean1, SE1)
 y2 = stats.t.pdf(x2, n2-1, mean2, SE2)
 
-plt.plot(x1,y1, color=&#39;red&#39;)
-plt.plot(x2,y2, color=&#39;blue&#39;)
+plt.plot(x1,y1, color='red')
+plt.plot(x2,y2, color='blue')
 
 plt.show()
 </code></pre></div>
 <p><img src="src/ex8_3.png" width="80%"></p>
-<div class="language-text highlight"><pre><span></span><code>val = stats.ttest_rel(df[&#39;Before&#39;], df[&#39;After&#39;])
+<div class="language-text highlight"><pre><span></span><code>val = stats.ttest_rel(df['Before'], df['After'])
 
 alpha = 0.05
 stat = abs(round(val[0],2))
@@ -1873,7 +1873,7 @@ nonalg = 254-alg
 <ol>
 <li>
 <p>Since we have two proportions, we can use test of difference between proportions:</p>
-<div class="language-text highlight"><pre><span></span><code>val = sm.stats.proportions_ztest([algs, nonalgs], [alg, nonalg], value = None, alternative = &#39;larger&#39;)
+<div class="language-text highlight"><pre><span></span><code>val = sm.stats.proportions_ztest([algs, nonalgs], [alg, nonalg], value = None, alternative = 'larger')
 stat = abs(round(val[0],2))
 pvalue = round(val[1],4)
 
@@ -1881,9 +1881,9 @@ alpha = 0.05
 crit = stats.norm.isf(alpha/2)
 
 if pvalue &lt; alpha:
-    print(&quot;Reject since &quot; + repr(pvalue) + &#39; &lt; &#39; + repr(alpha))
+    print("Reject since " + repr(pvalue) + ' &lt; ' + repr(alpha))
 else:
-    print(&quot;Fail to reject since &quot; + repr(pvalue) + &#39; &gt; &#39; + repr(alpha))
+    print("Fail to reject since " + repr(pvalue) + ' &gt; ' + repr(alpha))
 </code></pre></div>
 <p>Reject since 0.0432 &lt; 0.05</p>
 <div class="language-text highlight"><pre><span></span><code>import numpy as np
@@ -1906,16 +1906,16 @@ p_value = norm.sf(z_score)  # sf is survival function, which is 1-cdf
 alpha = 0.05
 
 # Display the results
-display(Markdown(f&quot;### Z-Test Results for Two Proportions&quot;))
-display(Markdown(f&quot;**Z-Score:** {z_score:.2f}&quot;))
-display(Markdown(f&quot;**P-Value:** {p_value:.4f}&quot;))
-display(Markdown(f&quot;**Significance Level (Alpha):** {alpha}&quot;))
+display(Markdown(f"### Z-Test Results for Two Proportions"))
+display(Markdown(f"**Z-Score:** {z_score:.2f}"))
+display(Markdown(f"**P-Value:** {p_value:.4f}"))
+display(Markdown(f"**Significance Level (Alpha):** {alpha}"))
 
 # Decision based on p-value
 if p_value &lt; alpha:
-    display(Markdown(&quot;**Conclusion:** Reject the null hypothesis since p-value &lt; alpha.&quot;))
+    display(Markdown("**Conclusion:** Reject the null hypothesis since p-value &lt; alpha."))
 else:
-    display(Markdown(&quot;**Conclusion:** Fail to reject the null hypothesis since p-value &gt; alpha.&quot;))
+    display(Markdown("**Conclusion:** Fail to reject the null hypothesis since p-value &gt; alpha."))
 </code></pre></div>
 <p>Z-Test Results for Two Proportions</p>
 <p>Z-Score: 1.71</p>
@@ -1946,7 +1946,7 @@ else:
 <ol>
 <li>
 <div class="language-text highlight"><pre><span></span><code>df = pd.read_excel(
-    &#39;Batteries.xlsx&#39;
+    'Batteries.xlsx'
 )
 df.head()
 </code></pre></div>
@@ -1986,42 +1986,42 @@ df.head()
 </tr>
 </tbody>
 </table>
-<div class="language-text highlight"><pre><span></span><code>q3, q1 = np.percentile(df[&#39;Producer 1&#39;], [75,25])
+<div class="language-text highlight"><pre><span></span><code>q3, q1 = np.percentile(df['Producer 1'], [75,25])
 iqr = q3 - q1
 upper = q3+1.5*iqr
 lower = q1 - 1.5*iqr
-average = df.loc[(df[&#39;Producer 1&#39;] &lt; upper) &amp; (df[&#39;Producer 1&#39;] &gt; lower)  , &#39;Producer 1&#39;].mean()
-df[&#39;Producer 1&#39;] = np.where((df[&#39;Producer 1&#39;] &gt; upper) | (df[&#39;Producer 1&#39;] &lt; lower), average, df[&#39;Producer 1&#39;])
+average = df.loc[(df['Producer 1'] &lt; upper) &amp; (df['Producer 1'] &gt; lower)  , 'Producer 1'].mean()
+df['Producer 1'] = np.where((df['Producer 1'] &gt; upper) | (df['Producer 1'] &lt; lower), average, df['Producer 1'])
 
-q3, q1 = np.percentile(df[&#39;Producer 2&#39;], [75,25])
+q3, q1 = np.percentile(df['Producer 2'], [75,25])
 iqr = q3 - q1
 upper = q3+1.5*iqr
 lower = q1 - 1.5*iqr
-average = df.loc[(df[&#39;Producer 2&#39;] &lt; upper) &amp; (df[&#39;Producer 2&#39;] &gt; lower)  , &#39;Producer 2&#39;].mean()
-df[&#39;Producer 2&#39;] = np.where((df[&#39;Producer 2&#39;] &gt; upper) | (df[&#39;Producer 2&#39;] &lt; lower), average, df[&#39;Producer 2&#39;])
+average = df.loc[(df['Producer 2'] &lt; upper) &amp; (df['Producer 2'] &gt; lower)  , 'Producer 2'].mean()
+df['Producer 2'] = np.where((df['Producer 2'] &gt; upper) | (df['Producer 2'] &lt; lower), average, df['Producer 2'])
 </code></pre></div>
 </li>
 <li>
-<div class="language-text highlight"><pre><span></span><code>df1 = df[&#39;Producer 1&#39;]
-df2 = df[&#39;Producer 2&#39;]
+<div class="language-text highlight"><pre><span></span><code>df1 = df['Producer 1']
+df2 = df['Producer 2']
 
-print(&#39;Producer 1: &#39;)
-print(&#39;q1 = &#39;, round(df1.quantile(0.25), 4))
-print(&#39;q2 = &#39;, round(df1.quantile(0.5), 4))
-print(&#39;q3 = &#39;, round(df1.quantile(0.75), 4))
-print(&#39;q4 = &#39;, round(df1.quantile(1), 4))
-print(&#39;average = &#39;, round(df1.mean(), 4))
-print(&#39;std = &#39;, round(df1.std(), 4))
-print(&#39;std = &#39;, round(df1.var(), 4))
-print(&#39; &#39;)
-print(&#39;Producer 2: &#39;)
-print(&#39;q1 = &#39;, round(df2.quantile(0.25), 4))
-print(&#39;q2 = &#39;, round(df2.quantile(0.5), 4))
-print(&#39;q3 = &#39;, round(df2.quantile(0.75), 4))
-print(&#39;q4 = &#39;, round(df2.quantile(1), 4))
-print(&#39;average = &#39;, round(df2.mean(), 4))
-print(&#39;std = &#39;, round(df2.std(), 4))
-print(&#39;std = &#39;, round(df2.var(), 4))
+print('Producer 1: ')
+print('q1 = ', round(df1.quantile(0.25), 4))
+print('q2 = ', round(df1.quantile(0.5), 4))
+print('q3 = ', round(df1.quantile(0.75), 4))
+print('q4 = ', round(df1.quantile(1), 4))
+print('average = ', round(df1.mean(), 4))
+print('std = ', round(df1.std(), 4))
+print('std = ', round(df1.var(), 4))
+print(' ')
+print('Producer 2: ')
+print('q1 = ', round(df2.quantile(0.25), 4))
+print('q2 = ', round(df2.quantile(0.5), 4))
+print('q3 = ', round(df2.quantile(0.75), 4))
+print('q4 = ', round(df2.quantile(1), 4))
+print('average = ', round(df2.mean(), 4))
+print('std = ', round(df2.std(), 4))
+print('std = ', round(df2.var(), 4))
 </code></pre></div>
 <p>Producer 1: </p>
 <p>q1 =  1.1888</p>
@@ -2050,8 +2050,8 @@ Level = 0.95
 
 CI = stats.t.interval(Level, n-1, loc=mean, scale=SE)
 
-print(&#39;An &#39; + repr(Level*100) + &#39; % upper confidence interval for the sample mean is [&#39;
-    + repr(round(CI[0],2)) + &#39;; &#39; + repr(round(CI[1],2)) + &#39;]&#39;)
+print('An ' + repr(Level*100) + ' % upper confidence interval for the sample mean is ['
+    + repr(round(CI[0],2)) + '; ' + repr(round(CI[1],2)) + ']')
 </code></pre></div>
 <p>An 95.0 % upper confidence interval for the sample mean is [1.56; 2.24]</p>
 <div class="language-text highlight"><pre><span></span><code>import numpy as np
@@ -2080,19 +2080,19 @@ lower = mean - t_crit * std_error
 upper = mean + t_crit * std_error
 
 # Print the confidence interval
-print(&quot;95% Confidence Interval mean Producer 1: [{:.2f}, {:.2f}]&quot;.format(lower, upper))
+print("95% Confidence Interval mean Producer 1: [{:.2f}, {:.2f}]".format(lower, upper))
 
 # Plot the t-distribution with the rejection region shaded
 x = np.linspace(mean-4*std_error, mean+4*std_error, 1000)
 y = stats.t.pdf(x,dof, mean, std_error)
-plt.plot(x, y, &#39;k&#39;, linewidth=2)
+plt.plot(x, y, 'k', linewidth=2)
 shade = np.linspace(lower, upper, 300)
 plt.fill_between(shade, stats.t.pdf(shade, dof, mean, std_error), alpha=0.5)
-plt.axvline(x=lower, linestyle=&#39;--&#39;, color=&#39;k&#39;)
-plt.axvline(x=upper, linestyle=&#39;--&#39;, color=&#39;k&#39;)
-plt.title(&quot;t-Distribution with 95% Confidence Interval \n for the mean of batteries from producer 1&quot;)
-plt.xlabel(&quot;t-value&quot;)
-plt.ylabel(&quot;Probability density&quot;)
+plt.axvline(x=lower, linestyle='--', color='k')
+plt.axvline(x=upper, linestyle='--', color='k')
+plt.title("t-Distribution with 95% Confidence Interval \n for the mean of batteries from producer 1")
+plt.xlabel("t-value")
+plt.ylabel("Probability density")
 plt.show()
 
 # Using the formula
@@ -2117,19 +2117,19 @@ lower = mean - t_crit * std_error
 upper = mean + t_crit * std_error
 
 # Print the confidence interval
-print(&quot;95% Confidence Interval mean Producer 2: [{:.2f}, {:.2f}]&quot;.format(lower, upper))
+print("95% Confidence Interval mean Producer 2: [{:.2f}, {:.2f}]".format(lower, upper))
 
 # Plot the t-distribution with the rejection region shaded
 x = np.linspace(mean-4*std_error, mean+4*std_error, 1000)
 y = stats.t.pdf(x,dof, mean, std_error)
-plt.plot(x, y, &#39;k&#39;, linewidth=2)
+plt.plot(x, y, 'k', linewidth=2)
 shade = np.linspace(lower, upper, 300)
 plt.fill_between(shade, stats.t.pdf(shade, dof, mean, std_error), alpha=0.5)
-plt.axvline(x=lower, linestyle=&#39;--&#39;, color=&#39;k&#39;)
-plt.axvline(x=upper, linestyle=&#39;--&#39;, color=&#39;k&#39;)
-plt.title(&quot;t-Distribution with 95% Confidence Interval \n for the mean of batteries from producer 2&quot;)
-plt.xlabel(&quot;t-value&quot;)
-plt.ylabel(&quot;Probability density&quot;)
+plt.axvline(x=lower, linestyle='--', color='k')
+plt.axvline(x=upper, linestyle='--', color='k')
+plt.title("t-Distribution with 95% Confidence Interval \n for the mean of batteries from producer 2")
+plt.xlabel("t-value")
+plt.ylabel("Probability density")
 plt.show()
 </code></pre></div>
 <p>95% Confidence Interval mean Producer 1: [1.56, 2.24]</p>
@@ -2139,24 +2139,24 @@ plt.show()
 </li>
 <li>
 <div class="language-text highlight"><pre><span></span><code>stats.probplot(df1, plot=plt)
-plt.ylabel(&#39;Producer 1&#39;)
+plt.ylabel('Producer 1')
 plt.show()
-print(&#39;Skewness = &#39; + repr(round(stats.skew(df1),4)))
-print(&#39;Kurtosis = &#39; + repr(round(stats.kurtosis(df1),4)))
+print('Skewness = ' + repr(round(stats.skew(df1),4)))
+print('Kurtosis = ' + repr(round(stats.kurtosis(df1),4)))
 fig, ax = plt.subplots()
-df1.plot.kde(ax=ax, legend=False, title=&#39;Distribution of mean of Producer 1&#39;);
+df1.plot.kde(ax=ax, legend=False, title='Distribution of mean of Producer 1');
 </code></pre></div>
 <p><img src="src/ex10_3.png" width="80%"></p>
 <p>Skewness = 0.1134</p>
 <p>Kurtosis = -0.4326</p>
 <p><img src="src/ex10_4.png" width="80%"></p>
 <div class="language-text highlight"><pre><span></span><code>stats.probplot(df2, plot=plt)
-plt.ylabel(&#39;Producer 2&#39;)
+plt.ylabel('Producer 2')
 plt.show()
-print(&#39;Skewness = &#39; + repr(round(stats.skew(df2),4)))
-print(&#39;Kurtosis = &#39; + repr(round(stats.kurtosis(df2),4)))
+print('Skewness = ' + repr(round(stats.skew(df2),4)))
+print('Kurtosis = ' + repr(round(stats.kurtosis(df2),4)))
 fig, ax = plt.subplots()
-df2.plot.kde(ax=ax, legend=False, title=&#39;Distribution of mean of Producer 2&#39;);
+df2.plot.kde(ax=ax, legend=False, title='Distribution of mean of Producer 2');
 </code></pre></div>
 <p><img src="src/ex10_5.png" width="80%"></p>
 <p>Skewness = -0.1821</p>
@@ -2194,19 +2194,19 @@ lower = diff - t_crit * std_error
 upper = diff + t_crit * std_error
 
 # Print the confidence interval
-print(&quot;95% Confidence Interval for the Difference in Means: [{:.2f}, {:.2f}]&quot;.format(lower, upper))
+print("95% Confidence Interval for the Difference in Means: [{:.2f}, {:.2f}]".format(lower, upper))
 
 # Plot the t-distribution with the rejection region shaded
 x = np.linspace(-4, 4, 1000)
 y = stats.t.pdf(x, df)
-plt.plot(x, y, &#39;k&#39;, linewidth=2)
+plt.plot(x, y, 'k', linewidth=2)
 shade1 = np.linspace(-t_crit, t_crit, 300)
 plt.fill_between(shade1, stats.t.pdf(shade1, df), alpha=0.5)
-plt.axvline(x=t_crit, linestyle=&#39;--&#39;, color=&#39;k&#39;)
-plt.axvline(x=-t_crit, linestyle=&#39;--&#39;, color=&#39;k&#39;)
-plt.title(&quot;t-Distribution with 95% Confidence Interval for the Difference in Means&quot;)
-plt.xlabel(&quot;t-value&quot;)
-plt.ylabel(&quot;Probability density&quot;)
+plt.axvline(x=t_crit, linestyle='--', color='k')
+plt.axvline(x=-t_crit, linestyle='--', color='k')
+plt.title("t-Distribution with 95% Confidence Interval for the Difference in Means")
+plt.xlabel("t-value")
+plt.ylabel("Probability density")
 plt.show()
 </code></pre></div>
 <p>95% Confidence Interval for the Difference in Means: [-1.05, -0.10]</p>
@@ -2238,35 +2238,35 @@ t_crit = stats.t.ppf(1 - alpha/2, len(data1) + len(data2) - 2)
 
 # Print the results of the hypothesis test
 if p_value &lt; alpha:
-    print(&quot;Reject since &quot;, round(p_value, 4), &#39; &lt; &#39;, alpha)
+    print("Reject since ", round(p_value, 4), ' &lt; ', alpha)
 else:
-    print(&quot;Fail to reject since &quot;, round(p_value, 4) , &#39;\u2265&#39; , alpha)
+    print("Fail to reject since ", round(p_value, 4) , '\u2265' , alpha)
 
 # Plot the t-distribution with the rejection region shaded
 x = np.linspace(-4, 4, 1000)
 y = stats.t.pdf(x, len(data1) + len(data2) - 2)
-plt.plot(x, y, &#39;k&#39;, linewidth=2)
+plt.plot(x, y, 'k', linewidth=2)
 shade1 = np.linspace(-t_crit, t_crit, 300)
 shade2 = np.linspace(t_crit, 4, 300)
 plt.fill_between(shade1, stats.t.pdf(shade1, len(data1) + len(data2) - 2), alpha=0.5)
 plt.fill_between(shade2, stats.t.pdf(shade2, len(data1) + len(data2) - 2), alpha=0.5)
-plt.axvline(x=t_crit, linestyle=&#39;--&#39;, color=&#39;k&#39;)
-plt.axvline(x=-t_crit, linestyle=&#39;--&#39;, color=&#39;k&#39;)
+plt.axvline(x=t_crit, linestyle='--', color='k')
+plt.axvline(x=-t_crit, linestyle='--', color='k')
 
 # Add an arrow pointing to the position on the x-axis where the p-value lies
 if p_value &lt; alpha/2:
-    plt.annotate(&quot;p = {:.4f}&quot;.format(p_value), xy=(t_stat, 0.1), xytext=(t_stat + 1, 0.3),
-                arrowprops=dict(facecolor=&#39;green&#39;, shrink=0.05))
+    plt.annotate("p = {:.4f}".format(p_value), xy=(t_stat, 0.1), xytext=(t_stat + 1, 0.3),
+                arrowprops=dict(facecolor='green', shrink=0.05))
 elif p_value &gt; 1 - alpha/2:
-    plt.annotate(&quot;p = {:.4f}&quot;.format(p_value), xy=(t_stat, 0.1), xytext=(t_stat - 1, 0.3),
-                arrowprops=dict(facecolor=&#39;green&#39;, shrink=0.05))
+    plt.annotate("p = {:.4f}".format(p_value), xy=(t_stat, 0.1), xytext=(t_stat - 1, 0.3),
+                arrowprops=dict(facecolor='green', shrink=0.05))
 else:
-    plt.annotate(&quot;p = {:.4f}&quot;.format(p_value), xy=(t_stat, 0.1), xytext=(t_stat, 0.3),
-                arrowprops=dict(facecolor=&#39;green&#39;, shrink=0.05))
+    plt.annotate("p = {:.4f}".format(p_value), xy=(t_stat, 0.1), xytext=(t_stat, 0.3),
+                arrowprops=dict(facecolor='green', shrink=0.05))
 
-plt.title(&quot;t-Distribution with Hypothesis Test Results&quot;)
-plt.xlabel(&quot;t-value&quot;)
-plt.ylabel(&quot;Probability density&quot;)
+plt.title("t-Distribution with Hypothesis Test Results")
+plt.xlabel("t-value")
+plt.ylabel("Probability density")
 plt.show()
 </code></pre></div>
 <p>Reject since  0.0177  &lt;  0.05</p>
@@ -2412,10 +2412,10 @@ plt.show()
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.prune", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.prune", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
